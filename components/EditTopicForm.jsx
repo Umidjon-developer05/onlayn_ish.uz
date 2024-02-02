@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditTopicForm({ id, title, description }) {
+export default function EditTopicForm({ id, title, description ,time,time1}) {
   const [newTitle, setNewTitle] = useState(title);
   const [newDescription, setNewDescription] = useState(description);
+  const [newTime, setNewTime] = useState(time);
+  const [newTime1, setNewTime1] = useState(time1);
 
   const router = useRouter();
 
@@ -13,12 +15,12 @@ export default function EditTopicForm({ id, title, description }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`https://todo-list-beta-lovat-20.vercel.app/api/topics/${id}`, {
+      const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
         },
-        body: JSON.stringify({ newTitle, newDescription }),
+        body: JSON.stringify({ newTitle, newDescription ,newTime,newTime1}),
       });
 
       if (!res.ok) {
@@ -47,6 +49,20 @@ export default function EditTopicForm({ id, title, description }) {
         value={newDescription}
         className="border border-slate-500 px-8 py-2"
         type="text"
+        placeholder="Topic Description"
+      />
+      <input
+        onChange={(e) => setNewTime(e.target.value)}
+        value={newTime}
+        className="border border-slate-500 px-8 py-2"
+        type="time"
+        placeholder="Topic Description"
+      />
+      <input
+        onChange={(e) => setNewTime1(e.target.value)}
+        value={newTime1}
+        className="border border-slate-500 px-8 py-2"
+        type="Number"
         placeholder="Topic Description"
       />
 

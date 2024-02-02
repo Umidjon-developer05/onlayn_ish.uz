@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "./UsersGet.css"
+import AosConfig from '@/utils/Aos';
   const UsersGet = () => {
     const [topics, setTopics] = useState([]);
-    const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
     const [clickedButtonId, setClickedButtonId] = useState(null);
     const [buttonClicked, setButtonClicked] = useState(false);
@@ -13,7 +13,7 @@ import "./UsersGet.css"
     useEffect(() => {
       const UserData = async () => {
         try {
-          const res = await fetch("https://todo-list-beta-lovat-20.vercel.app/api/topics", {
+          const res = await fetch("http://localhost:3000/api/topics", {
             cache: "no-store",
           });
 
@@ -72,25 +72,26 @@ import "./UsersGet.css"
       localStorage.setItem('clickedButtonIds', JSON.stringify(clickedButtonIds));
     }, [clickedButtonIds]);
 
+    AosConfig()
+
     return (
-      <div style={{ width: "100%",display:"flex" ,justifyContent:"center", margin:"0 auto" , flexWrap:"wrap"}}>
+      <div  style={{ width: "100%",display:"flex",gap:"14px", justifyContent:"center", margin:"0 auto" , flexWrap:"wrap",}}>
         {topics?.topics?.map((t) => (
           <div
+            data-aos='zoom-in-up' data-aos-duraiton={1800}
             key={t._id} 
-            className="p-4 border my-3 m-3  "
+            className="p-4 border my-1 md:my-3 rounded-[20px] w-[320px] h-[320px] md:w-[400px] md:h-[400px]"
             style={{
-              borderRadius: "20px",
-              width:"400px",
-              height:"400px",
+              boxShadow:"rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
            
             }}
           >
-            <div style={{display:"flex",flexDirection:"column",overflow: "auto",height:"300px"}} >
-              <h2 className="font-bold text-2xl" style={{color: clickedButtonId === t._id && desc === 'ish bajarildi😁' ?'#222':'#222'}}>{t.title}</h2>
+            <div className='flex flex-col overflow-auto h-[240px] md:h-[300px]'>
+              <h2 className="font-bold text-xl sm:text-2xl" style={{color: clickedButtonId === t._id && desc === 'ish bajarildi😁' ?'#222':'#222'}}>{t.title}</h2>
               <div style={{color: clickedButtonId === t._id && desc === 'ish bajarildi😁' ?'#222':'#222'}}>{t.description}</div>
             </div>
            
-            <div className="flex gap-2 justify-between " style={{alignItems:"end",}}>
+            <div className="flex gap-2 justify-between items-center">
               <div style={{color: clickedButtonId === t._id && desc === 'ish bajarildi😁' ?'#222':'#222'}}>{t.time}</div>
              <div>
              <a href="https://t.me/Umidjon01_developer">
@@ -101,8 +102,7 @@ import "./UsersGet.css"
                   height:"50px",
                   borderRadius: "20px",
                   cursor:"pointer",
-                  color: "#fff",
-                  backgroundColor: 'gray' }} 
+                  color: "#fff"}} 
               >
                 Telegram 
               </button>

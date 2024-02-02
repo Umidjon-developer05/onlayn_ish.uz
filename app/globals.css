@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
   ::-webkit-scrollbar {
-      width: 0px;
+      width: 8px;
     }
     
   ::-webkit-scrollbar-track {
@@ -10,6 +10,14 @@
     }
     
   ::-webkit-scrollbar-thumb {
-      background-color: darkgrey;
+      background-color: rgb(30,41,59);
       outline: 1px solid slategrey;
     }
+.loading-animation{
+  animation: spin .5s infinite ease-in;
+}
+@keyframes spin{
+  to{
+    transform: rotateZ(360deg);
+  }
+}

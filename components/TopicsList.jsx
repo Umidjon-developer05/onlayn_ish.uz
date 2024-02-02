@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import UsersGet from "./UsersGet";
 import RemoveBtn1 from "./RemoveBtn1";
 import Xato from "./Xato";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 // Other imports...
 // Other imports...
@@ -20,7 +21,7 @@ const TopicsList = () => {
   useEffect(() => {
     const fetchTopicsData = async () => {
       try {
-        const res = await fetch("https://todo-list-beta-lovat-20.vercel.app/api/topics", {
+        const res = await fetch("http://localhost:3000/api/topics", {
           cache: "no-store",
         });
 
@@ -42,7 +43,7 @@ const TopicsList = () => {
   useEffect(() => {
     const UserData = async () => {
       try {
-        const res = await fetch("https://todo-list-beta-lovat-20.vercel.app/api/button", {
+        const res = await fetch("http://localhost:3000/api/button", {
           cache: "no-store",
         });
 
@@ -60,9 +61,8 @@ const TopicsList = () => {
     UserData();
   }, []);
   if (status === "loading" || loading) {
-    return <div>Loading...</div>; // Show loading indicator while fetching data
+    return <div className="w-full h-full fixed top-0 left-0 bg-[rgb(30,41,59)] z-20 grid place-items-center text-[40px] text-white "><AiOutlineLoading3Quarters className="loading-animation"/></div>; // Show loading indicator while fetching data
   }
-  console.log(Button);
 
   if (!session?.user?.email) {
     return <Xato/>;
@@ -70,7 +70,7 @@ const TopicsList = () => {
   if (session?.user?.email === process.env.NEXT_PUBLIC_EMAIL) {
     return (
       <>
-      <div style={{ overflowY:"auto",height:"500px"}}>{
+      <div  style={{ overflowY:"auto",height:"500px"}}>{
           topics.topics?.map((t) => (
             <div
               key={t._id}

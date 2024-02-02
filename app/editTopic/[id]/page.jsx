@@ -2,7 +2,7 @@ import EditTopicForm from "@/components/EditTopicForm";
 
 const getTopicById = async (id) => {
   try {
-    const res = await fetch(`https://todo-list-beta-lovat-20.vercel.app/api/topics/${id}`, {
+    const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
       cache: "no-store",
     });
 
@@ -19,7 +19,7 @@ const getTopicById = async (id) => {
 export default async function EditTopic({ params }) {
   const { id } = params;
   const { topic } = await getTopicById(id);
-  const { title, description } = topic;
+  const { title, description ,time,time1} = topic;
 
-  return <EditTopicForm id={id} title={title} description={description} />;
+  return <EditTopicForm id={id} title={title} description={description} time={time} time1 ={time1} />;
 }

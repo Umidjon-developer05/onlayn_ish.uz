@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import AuthProvider from "@/components/AuthProvider/AuthProvider";
 import { ThemeProvider } from "@/components/context/ThemeContext";
+import Hero from "@/components/context/Hero";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,11 +14,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
           <html lang="en">
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+            </head>
             <body className={inter.className}>
               <AuthProvider>
                   <div className="max-w-10xl mx-auto ">
                     <Navbar />
-                    <div className="mt-8">{children}</div>
+                    <Hero/>
+                    <div className="mt-4 lg:mt-8">{children}</div>
                   </div>
               </AuthProvider>
             </body>
