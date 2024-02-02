@@ -1,4 +1,4 @@
-// File: C:\Users\aslid\OneDrive\Desktop\CRUD_MongoDB-main\app\api\topics\route.js
+// File: C:\Users\Hp Victus\Desktop\ish_uz\CRUD_MongoDB-main\app\api\topics\route.js
 import * as entry from '../../../../../app/api/topics/route.js'
 import type { NextRequest } from 'next/server.js'
 
