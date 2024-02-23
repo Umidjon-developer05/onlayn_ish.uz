@@ -18,7 +18,7 @@ export default function Hero (){
       useEffect(() => {
         const UserData = async () => {
           try {
-            const res = await fetch("http://localhost:3000/api/topics", {
+            const res = await fetch("https://www.onlayn-ish.uz/api/topics", {
               cache: "no-store",
             });
     
