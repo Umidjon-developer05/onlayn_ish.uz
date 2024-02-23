@@ -18,7 +18,7 @@ export default function Hero (){
       useEffect(() => {
         const UserData = async () => {
           try {
-            const res = await fetch("https://www.onlayn-ish.uz/api/topics", {
+            const res = await fetch("http://localhost:3000/api/topics", {
               cache: "no-store",
             });
     
@@ -67,11 +67,7 @@ export default function Hero (){
             <div className='max-h-[160px] md:max-h-[180px] lg:max-h-[210px] overflow-y-auto'>
                 {
                   searchData.map((x,index)=>
-<<<<<<< HEAD
                       <div  key={index} className="w-full pt-2 pb-2 hover:bg-slate-800 hover:text-white indent-3 cursor-pointer text-[13px] xl:text-[15px]">
-=======
-                      <div key={index} className="w-full pt-2 pb-2 hover:bg-slate-800 hover:text-white indent-3 cursor-pointer text-[13px] xl:text-[15px]">
->>>>>>> 6f823278d398d94564a5f4fae7a6c8a31a034dee
                         {x.title}
                       </div>
                     )
