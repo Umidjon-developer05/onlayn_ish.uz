@@ -21,7 +21,7 @@ const TopicsList = () => {
   useEffect(() => {
     const fetchTopicsData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/topics", {
+        const res = await fetch("https://www.onlayn-ish.uz/api/topics", {
           cache: "no-store",
         });
 
@@ -43,7 +43,7 @@ const TopicsList = () => {
   useEffect(() => {
     const UserData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/button", {
+        const res = await fetch("https://www.onlayn-ish.uz/api/button", {
           cache: "no-store",
         });
 
