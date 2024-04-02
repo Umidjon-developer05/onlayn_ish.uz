@@ -1,13 +1,10 @@
+"use client"
+import React from 'react'
 
-
-import TopicsList from '@/components/TopicsList';
-
-
-export default function Home() {
-  
+const page = () => {
   return (
-    <>
-       <TopicsList /> 
-    </>
-  );
+    <div>page</div>
+  )
 }
+
+export default page

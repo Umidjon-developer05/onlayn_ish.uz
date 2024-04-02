@@ -56,73 +56,57 @@
         "async": false
       }
     },
-    "(app-client)/./components/AuthProvider/AuthProvider.jsx": {
+    "(app-client)/./app/page.jsx": {
       "*": {
-        "id": "(sc_client)/./components/AuthProvider/AuthProvider.jsx",
+        "id": "(sc_client)/./app/page.jsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./components/Navbar.jsx": {
+    "(app-client)/./app/_component/AuthProvider/AuthProvider.jsx": {
       "*": {
-        "id": "(sc_client)/./components/Navbar.jsx",
+        "id": "(sc_client)/./app/_component/AuthProvider/AuthProvider.jsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./components/context/Hero.jsx": {
+    "(app-client)/./app/_component/Navbar1.jsx": {
       "*": {
-        "id": "(sc_client)/./components/context/Hero.jsx",
+        "id": "(sc_client)/./app/_component/Navbar1.jsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./components/context/ThemeContext.js": {
+    "(app-client)/./app/components/ThemeContext.js": {
       "*": {
-        "id": "(sc_client)/./components/context/ThemeContext.js",
+        "id": "(sc_client)/./app/components/ThemeContext.js",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./node_modules/next/dist/client/link.js": {
+    "(app-client)/./app/providers.jsx": {
       "*": {
-        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "id": "(sc_client)/./app/providers.jsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./components/RemoveBtn.jsx": {
+    "(app-client)/./app/SingIn/page.jsx": {
       "*": {
-        "id": "(sc_client)/./components/RemoveBtn.jsx",
+        "id": "(sc_client)/./app/SingIn/page.jsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./components/RemoveBtn1.jsx": {
+    "(app-client)/./app/work/page.js": {
       "*": {
-        "id": "(sc_client)/./components/RemoveBtn1.jsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./components/TopicsList.jsx": {
-      "*": {
-        "id": "(sc_client)/./components/TopicsList.jsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./app/addTopic/page.jsx": {
-      "*": {
-        "id": "(sc_client)/./app/addTopic/page.jsx",
+        "id": "(sc_client)/./app/work/page.js",
         "name": "*",
         "chunks": [],
         "async": false
@@ -291,108 +275,93 @@
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\AuthProvider\\AuthProvider.jsx": {
-      "id": "(app-client)/./components/AuthProvider/AuthProvider.jsx",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page.jsx": {
+      "id": "(app-client)/./app/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\_component\\AuthProvider\\AuthProvider.jsx": {
+      "id": "(app-client)/./app/_component/AuthProvider/AuthProvider.jsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\Navbar.jsx": {
-      "id": "(app-client)/./components/Navbar.jsx",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\_component\\Navbar1.jsx": {
+      "id": "(app-client)/./app/_component/Navbar1.jsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\context\\Hero.jsx": {
-      "id": "(app-client)/./components/context/Hero.jsx",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\components\\ThemeContext.js": {
+      "id": "(app-client)/./app/components/ThemeContext.js",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\context\\ThemeContext.js": {
-      "id": "(app-client)/./components/context/ThemeContext.js",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\providers.jsx": {
+      "id": "(app-client)/./app/providers.jsx",
       "name": "*",
       "chunks": [
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\client\\link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\SingIn\\page.jsx": {
+      "id": "(app-client)/./app/SingIn/page.jsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/SingIn/page:static/chunks/app/SingIn/page.js"
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\esm\\client\\link.js": {
-      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page.js": {
+      "id": "(app-client)/./app/work/page.js",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\RemoveBtn.jsx": {
-      "id": "(app-client)/./components/RemoveBtn.jsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\RemoveBtn1.jsx": {
-      "id": "(app-client)/./components/RemoveBtn1.jsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\TopicsList.jsx": {
-      "id": "(app-client)/./components/TopicsList.jsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\addTopic\\page.jsx": {
-      "id": "(app-client)/./app/addTopic/page.jsx",
-      "name": "*",
-      "chunks": [
-        "app/addTopic/page:static/chunks/app/addTopic/page.js"
+        "app/work/page:static/chunks/app/work/page.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page": {
+      "modules": [],
+      "files": []
+    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\layout": {
       "modules": [
-        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\globals.css",
-        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\aos\\dist\\aos.css",
-        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\font\\google\\target.css?{\"path\":\"app\\\\layout.js\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}"
+        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\globals.css"
       ],
       "files": [
         "static/css/app/layout.css"
       ]
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\SingIn\\page": {
       "modules": [
-        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\components\\UsersGet.css",
-        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\aos\\dist\\aos.css"
+        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\SingIn\\page.module.css"
       ],
       "files": [
-        "static/css/app/page.css"
+        "static/css/app/SingIn/page.css"
       ]
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\addTopic\\page": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\layout": {
       "modules": [],
       "files": []
     }
