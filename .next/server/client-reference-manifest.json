@@ -56,14 +56,6 @@
         "async": false
       }
     },
-    "(app-client)/./app/page.jsx": {
-      "*": {
-        "id": "(sc_client)/./app/page.jsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./app/_component/AuthProvider/AuthProvider.jsx": {
       "*": {
         "id": "(sc_client)/./app/_component/AuthProvider/AuthProvider.jsx",
@@ -88,6 +80,14 @@
         "async": false
       }
     },
+    "(app-client)/./app/layout.js": {
+      "*": {
+        "id": "(sc_client)/./app/layout.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./app/providers.jsx": {
       "*": {
         "id": "(sc_client)/./app/providers.jsx",
@@ -96,17 +96,17 @@
         "async": false
       }
     },
-    "(app-client)/./app/SingIn/page.jsx": {
+    "(app-client)/./app/components/ui/images-slider.js": {
       "*": {
-        "id": "(sc_client)/./app/SingIn/page.jsx",
+        "id": "(sc_client)/./app/components/ui/images-slider.js",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./app/work/page.js": {
+    "(app-client)/./app/page.jsx": {
       "*": {
-        "id": "(sc_client)/./app/work/page.js",
+        "id": "(sc_client)/./app/page.jsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -275,14 +275,6 @@
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page.jsx": {
-      "id": "(app-client)/./app/page.jsx",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\_component\\AuthProvider\\AuthProvider.jsx": {
       "id": "(app-client)/./app/_component/AuthProvider/AuthProvider.jsx",
       "name": "*",
@@ -307,6 +299,14 @@
       ],
       "async": false
     },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\layout.js": {
+      "id": "(app-client)/./app/layout.js",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\providers.jsx": {
       "id": "(app-client)/./app/providers.jsx",
       "name": "*",
@@ -315,28 +315,24 @@
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\SingIn\\page.jsx": {
-      "id": "(app-client)/./app/SingIn/page.jsx",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\components\\ui\\images-slider.js": {
+      "id": "(app-client)/./app/components/ui/images-slider.js",
       "name": "*",
       "chunks": [
-        "app/SingIn/page:static/chunks/app/SingIn/page.js"
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page.js": {
-      "id": "(app-client)/./app/work/page.js",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page.jsx": {
+      "id": "(app-client)/./app/page.jsx",
       "name": "*",
       "chunks": [
-        "app/work/page:static/chunks/app/work/page.js"
+        "app/page:static/chunks/app/page.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page": {
-      "modules": [],
-      "files": []
-    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\layout": {
       "modules": [
         "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\globals.css"
@@ -345,23 +341,7 @@
         "static/css/app/layout.css"
       ]
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\SingIn\\page": {
-      "modules": [
-        "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\SingIn\\page.module.css"
-      ],
-      "files": [
-        "static/css/app/SingIn/page.css"
-      ]
-    },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\page": {
-      "modules": [],
-      "files": []
-    },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page": {
-      "modules": [],
-      "files": []
-    },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\layout": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page": {
       "modules": [],
       "files": []
     }

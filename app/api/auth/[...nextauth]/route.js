@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import Users from "@/models/Users";
+import Users from "../../../../models/Users";
 import GithubProvider from "next-auth/providers/github";
 
 const handler = NextAuth({
@@ -21,6 +21,9 @@ const handler = NextAuth({
         const isAdminEmail = user.email === process.env.NEXT_PUBLIC_EMAIL;
         const isAdmin = isAdminEmail ? "Admin" : "User";
         await Users.create({
+          name: user.name,
+          email: user.email,
+          image: user.image,
           IsAdmin: isAdmin,
         });
       } catch (error) {
