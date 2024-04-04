@@ -42,9 +42,7 @@ function AdminDashboard() {
         </svg>
       </button>
 
-      <aside
-        class="fixed border top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-      >
+      <aside class="fixed border top-20 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
         <div class="h-full px-3 py-4 overflow-y-auto ">
           <a href="https://flowbite.com/" class="flex items-center ps-2.5 mb-5">
             <img
@@ -153,8 +151,8 @@ function AdminDashboard() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/admin-dashboard/dashboard_price"
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   <svg
@@ -169,7 +167,7 @@ function AdminDashboard() {
                   <span className="flex-1 ms-3 whitespace-nowrap">
                     Products
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -331,8 +329,8 @@ function AdminDashboard() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/admin-dashboard/dashboard_price"
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   <svg
@@ -347,7 +345,7 @@ function AdminDashboard() {
                   <span className="flex-1 ms-3 whitespace-nowrap">
                     Products
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -395,7 +393,6 @@ function AdminDashboard() {
           </div>
         </aside>
       ) : null}
-      
     </div>
   );
 }

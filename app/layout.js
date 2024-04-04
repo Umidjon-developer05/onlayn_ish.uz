@@ -4,6 +4,7 @@ import { ThemeProvider } from "./components/ThemeContext";
 import { Providers } from "./providers";
 import Navbar1 from "./_component/Navbar1";
 import { Toaster } from "react-hot-toast";
+import Telegram from "./_component/Telegram";
 import "./globals.css";
 function RootLayout({ children }) {
   return (
@@ -19,9 +20,10 @@ function RootLayout({ children }) {
             <div className="max-w-10xl  mx-auto ">
               <Providers>
                 <Navbar1 />
-                <div >
+                <div>
                   <Toaster position="top-center" />
                   {children}
+                  <Telegram />
                 </div>
               </Providers>
             </div>

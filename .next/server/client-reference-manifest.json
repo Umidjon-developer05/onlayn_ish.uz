@@ -56,6 +56,22 @@
         "async": false
       }
     },
+    "(app-client)/./app/components/ui/images-slider.js": {
+      "*": {
+        "id": "(sc_client)/./app/components/ui/images-slider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./app/_component/AuthProvider/AuthProvider.jsx": {
       "*": {
         "id": "(sc_client)/./app/_component/AuthProvider/AuthProvider.jsx",
@@ -96,17 +112,97 @@
         "async": false
       }
     },
-    "(app-client)/./app/components/ui/images-slider.js": {
+    "(app-client)/./app/(route)/admin-dashboard/page.jsx": {
       "*": {
-        "id": "(sc_client)/./app/components/ui/images-slider.js",
+        "id": "(sc_client)/./app/(route)/admin-dashboard/page.jsx",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./app/page.jsx": {
+    "(app-client)/./node_modules/next/dist/client/link.js": {
       "*": {
-        "id": "(sc_client)/./app/page.jsx",
+        "id": "(sc_client)/./node_modules/next/dist/client/link.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(route)/admin-dashboard/(route)/dashboard_price/_components/UsersGet.js": {
+      "*": {
+        "id": "(sc_client)/./app/(route)/admin-dashboard/(route)/dashboard_price/_components/UsersGet.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/client/image.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/client/image.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./node_modules/next/dist/shared/lib/head.js": {
+      "*": {
+        "id": "(sc_client)/./node_modules/next/dist/shared/lib/head.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/Dashboard/page.js": {
+      "*": {
+        "id": "(sc_client)/./app/Dashboard/page.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(route)/admin-dashboard/(route)/users/page.js": {
+      "*": {
+        "id": "(sc_client)/./app/(route)/admin-dashboard/(route)/users/page.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/page.js": {
+      "*": {
+        "id": "(sc_client)/./app/(route)/admin-dashboard/(route)/work-post/page.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/_components/Product.js": {
+      "*": {
+        "id": "(sc_client)/./app/(route)/admin-dashboard/(route)/work-post/_components/Product.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page.js": {
+      "*": {
+        "id": "(sc_client)/./app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(route)/admin-dashboard/(route)/dashboard_price/delete/[id]/page.js": {
+      "*": {
+        "id": "(sc_client)/./app/(route)/admin-dashboard/(route)/dashboard_price/delete/[id]/page.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/delete/[id]/page.js": {
+      "*": {
+        "id": "(sc_client)/./app/(route)/admin-dashboard/(route)/work-post/delete/[id]/page.js",
         "name": "*",
         "chunks": [],
         "async": false
@@ -275,6 +371,22 @@
       ],
       "async": false
     },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\components\\ui\\images-slider.js": {
+      "id": "(app-client)/./app/components/ui/images-slider.js",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page.jsx": {
+      "id": "(app-client)/./app/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\_component\\AuthProvider\\AuthProvider.jsx": {
       "id": "(app-client)/./app/_component/AuthProvider/AuthProvider.jsx",
       "name": "*",
@@ -315,24 +427,132 @@
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\components\\ui\\images-slider.js": {
-      "id": "(app-client)/./app/components/ui/images-slider.js",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\page.jsx": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/page.jsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/(route)/layout:static/chunks/app/(route)/layout.js"
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page.jsx": {
-      "id": "(app-client)/./app/page.jsx",
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\client\\link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/(route)/admin-dashboard/(route)/work-post/page:static/chunks/app/(route)/admin-dashboard/(route)/work-post/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\esm\\client\\link.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/link.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/work-post/page:static/chunks/app/(route)/admin-dashboard/(route)/work-post/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\dashboard_price\\_components\\UsersGet.js": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/(route)/dashboard_price/_components/UsersGet.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/dashboard_price/page:static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\client\\image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/dashboard_price/page:static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\esm\\client\\image.js": {
+      "id": "(app-client)/./node_modules/next/dist/client/image.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/dashboard_price/page:static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\shared\\lib\\head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/dashboard_price/page:static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\node_modules\\next\\dist\\esm\\shared\\lib\\head.js": {
+      "id": "(app-client)/./node_modules/next/dist/shared/lib/head.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/dashboard_price/page:static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\Dashboard\\page.js": {
+      "id": "(app-client)/./app/Dashboard/page.js",
+      "name": "*",
+      "chunks": [
+        "app/Dashboard/page:static/chunks/app/Dashboard/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\users\\page.js": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/(route)/users/page.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/users/page:static/chunks/app/(route)/admin-dashboard/(route)/users/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\work-post\\page.js": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/page.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/work-post/page:static/chunks/app/(route)/admin-dashboard/(route)/work-post/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\work-post\\_components\\Product.js": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/_components/Product.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page:static/chunks/app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\work-post\\edit\\[id]\\page.js": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page:static/chunks/app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\dashboard_price\\delete\\[id]\\page.js": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/(route)/dashboard_price/delete/[id]/page.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/dashboard_price/delete/[id]/page:static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/delete/[id]/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\work-post\\delete\\[id]\\page.js": {
+      "id": "(app-client)/./app/(route)/admin-dashboard/(route)/work-post/delete/[id]/page.js",
+      "name": "*",
+      "chunks": [
+        "app/(route)/admin-dashboard/(route)/work-post/delete/[id]/page:static/chunks/app/(route)/admin-dashboard/(route)/work-post/delete/[id]/page.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page": {
+      "modules": [],
+      "files": []
+    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\layout": {
       "modules": [
         "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\globals.css"
@@ -341,7 +561,43 @@
         "static/css/app/layout.css"
       ]
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\page": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\layout": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\dashboard_price\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\Dashboard\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\users\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\work-post\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\dashboard\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\work-post\\edit\\[id]\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\dashboard_price\\delete\\[id]\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\(route)\\admin-dashboard\\(route)\\work-post\\delete\\[id]\\page": {
       "modules": [],
       "files": []
     }

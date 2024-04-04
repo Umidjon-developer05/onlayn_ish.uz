@@ -14,6 +14,40 @@ function Work() {
     {
       title: "telegram kanal",
     },
+    {
+      title: "telegram guruhlar",
+    },
+    {
+      title: "Instagram",
+    },
+  ];
+  const defaultContent1 = [
+    {
+      title: "UI/UX designer",
+    },
+    {
+      title: "Website",
+    },
+    {
+      title: "Mobil ilovalar",
+    },
+  ];
+  const defaultContent2 = [
+    {
+      title: "Onlayn ishlar",
+    },
+    {
+      title: "Oflayn ishlar",
+    },
+    {
+      title: "Kunlik ishlar",
+    },
+    {
+      title: "Soatlik ishlar",
+    },
+    {
+      title: "Oylik ishlar",
+    },
   ];
   return (
     <div>
@@ -46,27 +80,34 @@ function Work() {
         aria-label="Sidebar"
       >
         <div class="h-screen px-3 py-4 overflow-y-auto border">
-          <a href="https://flowbite.com/" class="flex items-center ps-2.5 mb-5">
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              class="h-6 me-3 sm:h-7"
-              alt="Flowbite Logo"
-            />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
-            </span>
-          </a>
           <Accordion>
             <AccordionItem
               key="1"
               aria-label="Accordion"
-              title="telegram Kannalar "
+              title="Ishtimoiy tarmoqlar "
             >
               {defaultContent.map((item, index) => (
                 <p className="flex gap-2 mt-2 items-center" key={index}>
-                  <Checkbox defaultChecked >
-                    {item.title}
-                  </Checkbox>
+                  <Checkbox defaultChecked>{item.title}</Checkbox>
+                </p>
+              ))}
+            </AccordionItem>
+          </Accordion>
+
+          <Accordion>
+            <AccordionItem key="1" aria-label="Accordion" title="Website ">
+              {defaultContent1.map((item, index) => (
+                <p className="flex gap-2 mt-2 items-center" key={index}>
+                  <Checkbox defaultChecked>{item.title}</Checkbox>
+                </p>
+              ))}
+            </AccordionItem>
+          </Accordion>
+          <Accordion>
+            <AccordionItem key="1" aria-label="Accordion" title="Ishlar ">
+              {defaultContent2.map((item, index) => (
+                <p className="flex gap-2 mt-2 items-center" key={index}>
+                  <Checkbox defaultChecked>{item.title}</Checkbox>
                 </p>
               ))}
             </AccordionItem>

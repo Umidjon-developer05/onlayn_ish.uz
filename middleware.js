@@ -23,5 +23,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ["/admin-dashboard", "/admin-dashboard/dashboard", "/admin-dashboard/work-post", "/admin-dashboard/work-post/new1", "/admin-dashboard/work-post/edit/:id", "/admin-dashboard/work-post/delete/:id", "/admin-dashboard/users"],
+  matcher: ["/admin-dashboard", "/admin-dashboard/dashboard", "/admin-dashboard/work-post", "/admin-dashboard/work-post/new1", "/admin-dashboard/work-post/edit/:id", "/admin-dashboard/work-post/delete/:id", "/admin-dashboard/users","/admin-dashboard/users/new1","/admin-dashboard/users/edit/:id","/admin-dashboard/users/delete/:id" ],
 };

@@ -1,15 +1,65 @@
 {
   "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/(route)/admin-dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/(route)/admin-dashboard/page.js"
+    ],
+    "/(route)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/layout.js"
+    ],
+    "/(route)/admin-dashboard/(route)/dashboard_price/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/page.js"
+    ],
+    "/Dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Dashboard/page.js"
+    ],
+    "/(route)/admin-dashboard/(route)/users/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/admin-dashboard/(route)/users/page.js"
+    ],
+    "/(route)/admin-dashboard/(route)/work-post/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/admin-dashboard/(route)/work-post/page.js"
+    ],
+    "/(route)/admin-dashboard/(route)/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/admin-dashboard/(route)/dashboard/page.js"
+    ],
+    "/(route)/admin-dashboard/(route)/work-post/edit/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/admin-dashboard/(route)/work-post/edit/[id]/page.js"
+    ],
+    "/(route)/admin-dashboard/(route)/dashboard_price/delete/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/delete/[id]/page.js"
+    ],
+    "/(route)/admin-dashboard/(route)/work-post/delete/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(route)/admin-dashboard/(route)/work-post/delete/[id]/page.js"
     ]
   }
 }

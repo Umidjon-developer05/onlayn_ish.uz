@@ -102,7 +102,6 @@ export default function Navbar1() {
           </NavbarContent>
 
           <NavbarContent justify="end">
-           
             <NavbarItem>
               {sesison.data?.user ? (
                 <Dropdown placement="bottom-start">
@@ -138,7 +137,9 @@ export default function Navbar1() {
                     ) : (
                       <DropdownItem key="Dashboard">User</DropdownItem>
                     )}
-                    <DropdownItem key="Dashboard">Dashboard</DropdownItem>
+                    <DropdownItem key="Dashboard">
+                      <Link href="/Dashboard" className="w-full">Dashboard</Link>
+                    </DropdownItem>
                     <DropdownItem>
                       <Link className="w-full" href="/Settings">
                         Settings
