@@ -14,25 +14,10 @@ const handler = NextAuth({
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
-    async signIn({ user }) {
-      try {
-        const isAdminEmail = user.email === process.env.NEXT_PUBLIC_EMAIL;
-        const isAdmin = isAdminEmail ? "Admin" : "User";
-        await Users.create({
-          name: user.name,
-          email: user.email,
-          image: user.image,
-          IsAdmin: isAdmin,
-        });
-      } catch (error) {
-        console.error("Error creating user:", error);
-      }
-      return true;
-    },
+    
     async jwt({ token }) {
-      if (token.email === process.env.NEXT_PUBLIC_GitHub) {
+      if (token.email === process.env.NEXT_PUBLIC_GITHUB) {
         token.role = "admin";
       } else {
         token.role = "member";
@@ -40,6 +25,7 @@ const handler = NextAuth({
       return token;
     },
   },
+  secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { handler as GET, handler as POST };
