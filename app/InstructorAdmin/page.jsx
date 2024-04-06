@@ -1,9 +1,7 @@
 import React from 'react'
 
-const InstructorAdmin = () => {
-  return (
-    <div>InstructorAdmin</div>
-  )
+const page = () => {
+  
 }
 
-export default InstructorAdmin
+export default page

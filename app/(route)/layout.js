@@ -5,8 +5,8 @@ import { Toaster } from "react-hot-toast";
 const layout = ({ children }) => {
   return (
     <div>
-      <AdminDashboard />
       <Toaster position="top-center" />
+      <AdminDashboard />
 
       {children}
     </div>
