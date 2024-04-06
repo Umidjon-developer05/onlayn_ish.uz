@@ -13,7 +13,7 @@ export function Providers({ children }) {
           <div id="ring"></div>
           <div id="ring"></div>
           <div id="ring"></div>
-          <div id="h3">Onlayn-ish.uz</div>
+          <div >Onlayn-ish.uz</div>
         </div>
       </div>
     );
