@@ -151,7 +151,7 @@ export default function Navbar1() {
                     <DropdownItem key="system">System</DropdownItem>
                     <DropdownItem key="configurations">
                       <Link className="w-full" href="/LogIn">
-                        E'lon Log In
+                        Elon Log In
                       </Link>
                     </DropdownItem>
 
