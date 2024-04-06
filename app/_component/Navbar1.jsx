@@ -180,18 +180,10 @@ export default function Navbar1() {
                     <Link
                       as={Link}
                       color="warning"
-                      href="/sign-up"
-                      variant="flat"
-                    >
-                      Sign Up
-                    </Link>
-                    <Link
-                      as={Link}
-                      color="warning"
                       href="/SingIn"
                       variant="flat"
                     >
-                      LogIn
+                      Sign Up
                     </Link>
                   </div>
                 </>

@@ -393,15 +393,15 @@
         "static/css/app/layout.css"
       ]
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\InstructorAdmin\\page": {
-      "modules": [],
-      "files": []
-    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\LogIn\\page": {
       "modules": [],
       "files": []
     },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\InstructorAdmin\\page": {
       "modules": [],
       "files": []
     }
