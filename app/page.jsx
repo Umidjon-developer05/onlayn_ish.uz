@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "./components/ui/images-slider";
-
 export default function page() {
   const images = ["/work.avif", "/work1.avif", "/work2.jpg"];
   return (

@@ -1,24 +1,10 @@
 "use client";
-import React, { useState } from "react";
 import styles from "./page.module.css";
-import { useRouter } from "next/navigation";
-import {  signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 
 const Register = () => {
-  const [error, setError] = useState(null);
-  const route = useRouter();
-  const session = useSession();
-  console.log(session);
-  if (session.status === "loading") {
-    return <div>Loading...</div>;
-  }
-
-  if (session.status === "authenticated") {
-    route?.push("/");
-  }
-
   return (
-    <div className={styles.container}>
+    <div className="flex justify-center flex-col items-center gap-10 sm:h-[500px]">
       <button
         onClick={() => {
           signIn("google");
@@ -31,9 +17,10 @@ const Register = () => {
         onClick={() => {
           signIn("github");
         }}
-        className={styles.button + " " + styles.google}
+        className="flex gap-2 bg-green-500 sm:w-[400px] rounded-lg items-center justify-center p-5"
       >
-        Login with Github
+        <img src="/GitHub.svg" className="w-10 h-10 bg-slate-50 rounded-full" />
+        <p className="text-white"> Login with Github</p>
       </button>
     </div>
   );

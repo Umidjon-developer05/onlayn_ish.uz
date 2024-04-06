@@ -1,19 +1,9 @@
 {
   "pages": {
-    "/InstructorAdmin/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/InstructorAdmin/page.js"
-    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
-    ],
-    "/LogIn/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/LogIn/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -21,51 +11,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/Error/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/Error/page.js"
-    ],
-    "/(route)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(route)/layout.js"
-    ],
     "/work/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/work/page.js"
     ],
-    "/(route)/admin-dashboard/page": [
+    "/LogIn/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(route)/admin-dashboard/page.js"
+      "static/chunks/app/LogIn/page.js"
     ],
-    "/SingIn/page": [
+    "/InstructorAdmin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/SingIn/page.css",
-      "static/chunks/app/SingIn/page.js"
-    ],
-    "/(route)/admin-dashboard/(route)/admin_create/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(route)/admin-dashboard/(route)/admin_create/page.js"
-    ],
-    "/(route)/admin-dashboard/(route)/dashboard_price/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(route)/admin-dashboard/(route)/dashboard_price/page.js"
-    ],
-    "/(route)/admin-dashboard/(route)/admin_create/delete/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(route)/admin-dashboard/(route)/admin_create/delete/[id]/page.js"
-    ],
-    "/(route)/admin-dashboard/(route)/users/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(route)/admin-dashboard/(route)/users/page.js"
+      "static/chunks/app/InstructorAdmin/page.js"
     ]
   }
 }

@@ -1,14 +1,10 @@
 "use client";
 import { useState } from "react";
-// import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-// import { Button } from "../components/ui/button";
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuTrigger,
-// } from "../components/ui/dropdown-menu";
+
+import { UserProfile, UserButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
+
 import {
   Navbar,
   Dropdown,
@@ -25,6 +21,7 @@ import {
   Avatar,
 } from "@nextui-org/react";
 import { signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 export const AcmeLogo = () => (
   <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
     <path
@@ -38,8 +35,17 @@ export const AcmeLogo = () => (
 
 export default function Navbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { setTheme } = useTheme();
+  const token = localStorage.getItem("token");
+  const router = useRouter();
   const sesison = useSession();
+  const { user } = useUser();
+
+  function SingOut() {
+    signOut("/");
+    router.push("/");
+    localStorage.removeItem("token");
+  }
+
   const menuItems = [
     {
       name: "Profile",
@@ -103,7 +109,9 @@ export default function Navbar1() {
 
           <NavbarContent justify="end">
             <NavbarItem>
-              {sesison.data?.user ? (
+              {user ? (
+                <UserButton />
+              ) : sesison.data?.user ? (
                 <Dropdown placement="bottom-start">
                   <DropdownTrigger>
                     <Avatar
@@ -149,16 +157,25 @@ export default function Navbar1() {
                     </DropdownItem>
 
                     <DropdownItem key="system">System</DropdownItem>
-                    <DropdownItem key="configurations">
-                      <Link className="w-full" href="/LogIn">
-                        Elon Log In
-                      </Link>
-                    </DropdownItem>
+                    {token ? (
+                      <DropdownItem key="system">
+                        <Link href={`${token ? "/InstructorAdmin" : "/"}`}>
+                          InstructorAdmin
+                        </Link>
+                      </DropdownItem>
+                    ) : null}
+                    {token ? null : (
+                      <DropdownItem key="configurations">
+                        <Link className="w-full" href="/LogIn">
+                          Elon Log In
+                        </Link>
+                      </DropdownItem>
+                    )}
 
                     <DropdownItem
                       key="logout"
                       color="danger"
-                      onClick={() => signOut("/")}
+                      onClick={() => SingOut()}
                     >
                       Log Out
                     </DropdownItem>
@@ -166,9 +183,24 @@ export default function Navbar1() {
                 </Dropdown>
               ) : (
                 <>
-                  <Link as={Link} color="warning" href="/SingIn" variant="flat">
-                    Sign Up
-                  </Link>
+                  <div className="flex gap-2 items-center">
+                    <Link
+                      as={Link}
+                      color="warning"
+                      href="/sign-up"
+                      variant="flat"
+                    >
+                      Sign Up
+                    </Link>
+                    <Link
+                      as={Link}
+                      color="warning"
+                      href="/SingIn"
+                      variant="flat"
+                    >
+                      LogIn
+                    </Link>
+                  </div>
                 </>
               )}
             </NavbarItem>
