@@ -129,14 +129,14 @@ export default function Navbar1() {
                     {sesison.data?.user?.email ===
                       process.env.NEXT_PUBLIC_EMAIL ||
                     sesison.data?.user?.email ===
-                      process?.env.NEXT_PUBLIC_GitHub ? (
+                      process?.env.NEXT_PUBLIC_GITHUB ? (
                       <DropdownItem key="Dashboard">
                         <Link href="/admin-dashboard" className="w-full">
                           Admin
                         </Link>
                       </DropdownItem>
                     ) : (
-                      <DropdownItem key="Dashboard">User</DropdownItem>
+                      <DropdownItem key="Dashboard">Profile</DropdownItem>
                     )}
                     <DropdownItem key="Dashboard">
                       <Link href="/Dashboard" className="w-full">
