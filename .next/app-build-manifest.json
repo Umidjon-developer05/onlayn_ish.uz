@@ -11,20 +11,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/work/page": [
+    "/InstructorAdmin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/work/page.js"
+      "static/chunks/app/InstructorAdmin/page.js"
     ],
     "/LogIn/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/LogIn/page.js"
     ],
-    "/InstructorAdmin/page": [
+    "/work/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/InstructorAdmin/page.js"
+      "static/chunks/app/work/page.js"
     ]
   }
 }

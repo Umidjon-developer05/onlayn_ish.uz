@@ -1,9 +1,5 @@
 "use client";
 import { useState } from "react";
-import { useTheme } from "next-themes";
-
-import { UserProfile, UserButton } from "@clerk/nextjs";
-import { useUser } from "@clerk/nextjs";
 
 import {
   Navbar,
@@ -38,7 +34,6 @@ export default function Navbar1() {
   const token = localStorage.getItem("token");
   const router = useRouter();
   const sesison = useSession();
-  const { user } = useUser();
 
   function SingOut() {
     signOut("/");
@@ -109,9 +104,7 @@ export default function Navbar1() {
 
           <NavbarContent justify="end">
             <NavbarItem>
-              {user ? (
-                <UserButton />
-              ) : sesison.data?.user ? (
+              {sesison.data?.user ? (
                 <Dropdown placement="bottom-start">
                   <DropdownTrigger>
                     <Avatar

@@ -1,13 +1,8 @@
 import { withAuth } from "next-auth/middleware";
 import { NextResponse } from "next/server";
-import { authMiddleware } from "@clerk/nextjs";
 
 export default withAuth(
   function middleware(req) {
-    authMiddleware({
-      publicRoutes: ["/"],
-      ignoredRoutes: ["/"],
-    });
     if (
       req.nextauth.token?.email !== process.env.NEXT_PUBLIC_EMAIL &&
       req.nextUrl.pathname.startsWith("/admin-dashboard") &&
@@ -15,7 +10,6 @@ export default withAuth(
     ) {
       return new NextResponse("You are not authorized!");
     }
-    
   },
   {
     callbacks: {

@@ -128,17 +128,17 @@
         "async": false
       }
     },
-    "(app-client)/./app/work/page.js": {
+    "(app-client)/./app/LogIn/page.js": {
       "*": {
-        "id": "(sc_client)/./app/work/page.js",
+        "id": "(sc_client)/./app/LogIn/page.js",
         "name": "*",
         "chunks": [],
         "async": false
       }
     },
-    "(app-client)/./app/LogIn/page.js": {
+    "(app-client)/./app/work/page.js": {
       "*": {
-        "id": "(sc_client)/./app/LogIn/page.js",
+        "id": "(sc_client)/./app/work/page.js",
         "name": "*",
         "chunks": [],
         "async": false
@@ -387,19 +387,19 @@
       ],
       "async": false
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page.js": {
-      "id": "(app-client)/./app/work/page.js",
-      "name": "*",
-      "chunks": [
-        "app/work/page:static/chunks/app/work/page.js"
-      ],
-      "async": false
-    },
     "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\LogIn\\page.js": {
       "id": "(app-client)/./app/LogIn/page.js",
       "name": "*",
       "chunks": [
         "app/LogIn/page:static/chunks/app/LogIn/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page.js": {
+      "id": "(app-client)/./app/work/page.js",
+      "name": "*",
+      "chunks": [
+        "app/work/page:static/chunks/app/work/page.js"
       ],
       "async": false
     }
@@ -417,7 +417,7 @@
         "static/css/app/layout.css"
       ]
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\InstructorAdmin\\page": {
       "modules": [],
       "files": []
     },
@@ -425,7 +425,7 @@
       "modules": [],
       "files": []
     },
-    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\InstructorAdmin\\page": {
+    "C:\\Users\\Hp Victus\\Desktop\\ish_uz\\CRUD_MongoDB-main\\app\\work\\page": {
       "modules": [],
       "files": []
     }
