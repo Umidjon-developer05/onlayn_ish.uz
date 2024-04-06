@@ -19,7 +19,7 @@ const Pricing = () => {
               subscription="oy"
               description="Get started tugmasini bosangiz biz bilan telegram orqali bog'lanib to'lovni amalga oshiring va o'z e'loningizni qo'ying 😊."
               buttonText={`  ${
-                sesison?.data?.user ? "Get Started" : "Sign In"
+                sesison?.data?.user ? "Murojat qilish" : "Sign In"
               } `}
             >
               <List>1 User</List>
@@ -35,7 +35,7 @@ const Pricing = () => {
               subscription="oy"
               description="Get started tugmasini bosangiz biz bilan telegram orqali bog'lanib to'lovni amalga oshiring va o'z e'loningizni qo'ying 😊."
               buttonText={`  ${
-                sesison?.data?.user ? "Get Started" : "Sign In"
+                sesison?.data?.user ? "Murojat qilish" : "Sign In"
               } `}
               active
             >
@@ -52,7 +52,7 @@ const Pricing = () => {
               subscription="oy"
               description="Get started tugmasini bosangiz biz bilan telegram orqali bog'lanib to'lovni amalga oshiring va o'z e'loningizni qo'ying 😊."
               buttonText={`  ${
-                sesison?.data?.user ? "Get Started" : "Sign In"
+                sesison?.data?.user ? "Murojat qilish" : "Sign In"
               } `}
             >
               <List>Unlimited User</List>
@@ -105,19 +105,21 @@ const PricingCard = ({
       const name = sesison?.data?.user?.name;
       const email = sesison?.data?.user?.email;
       const image = sesison?.data?.user?.image;
+      const Action = "UnPublish";
       const data = {
         price,
         description,
         name,
         email,
         image,
+        Action,
       };
       try {
         await axios.post("/api/dashboard", data).then((res) => {
           if (res.status === 201) {
             toast.success("dashboard !!");
             window.open("https://t.me/Umidjon_developer", "_blank");
-          } 
+          }
         });
       } catch (error) {
         console.error("Error:", error);

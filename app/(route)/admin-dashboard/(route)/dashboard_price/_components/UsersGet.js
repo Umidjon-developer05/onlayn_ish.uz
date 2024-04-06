@@ -9,33 +9,39 @@ import {
   TableRow,
   TableCell,
   Pagination,
-  getKeyValue,
-  user,
 } from "@nextui-org/react";
 import Link from "next/link";
 import { Button } from "../../../../../components/ui/button";
 import Image from "next/image";
+
 const UsersGet = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
+  const [Timer, setTimer] = useState("");
 
   useEffect(() => {
     axios.get("/api/dashboard").then((response) => {
       setUsers(response?.data);
     });
   }, []);
-  console.log(users);
-  
-  const rowsPerPage = 4;
 
+  const rowsPerPage = 4;
   const pages = Math.ceil(users.length / rowsPerPage);
 
   const items = useMemo(() => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
-    console.log(start, end);
     return users.slice(start, end);
   }, [page, users]);
+  async function Publish(p) {
+    const Action = "Publish";
+    const data = {
+      id: p.id,
+      Action,
+    };
+    await axios.post("/api/publish", data);
+  }
+
   return (
     <div className="mt-2 mx-10">
       <Table
@@ -61,7 +67,7 @@ const UsersGet = () => {
           <TableColumn key="name">NAME</TableColumn>
           <TableColumn key="email">email</TableColumn>
           <TableColumn key="price">price</TableColumn>
-          <TableColumn key="">Action</TableColumn>
+          <TableColumn key="action">Action</TableColumn>
         </TableHeader>
         <TableBody items={items}>
           {(item) => (
@@ -72,15 +78,19 @@ const UsersGet = () => {
                   src={item.image}
                   className="rounded-full"
                   width={30}
+                  alt="image"
                   height={30}
                 />
                 <h2>{item.email}</h2>
               </TableCell>
               <TableCell>{item.price}</TableCell>
               <TableCell className="flex gap-2">
-                <Link href={``}>
-                  <Button variant="outline">Publish</Button>
-                </Link>
+                <button
+                  onClick={() => Publish(item)}
+                  className="outline hover:outline-blue-400 w-16 h-10 flex justify-center items-center  rounded-lg outline-offset-2 outline-blue-500"
+                >
+                  Publish
+                </button>
                 <Link
                   href={`/admin-dashboard/dashboard_price/delete/${item._id}`}
                 >

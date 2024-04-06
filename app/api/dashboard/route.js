@@ -30,23 +30,6 @@ export async function GET() {
   return NextResponse.json(userfind);
 }
 
-export async function PUT(request) {
-  try {
-    const { price, description, name, email, image, _id } =
-      await request.json();
-
-    const categoryDoc = await Dashboard.updateOne(
-      { _id },
-      { price, description, name, email, image }
-    );
-
-    return NextResponse.json({ categoryDoc });
-  } catch (error) {
-    console.error("Error updating userfind:", error);
-    return NextResponse.error("Failed to update userfind", { status: 500 });
-  }
-}
-
 export async function DELETE(request) {
   const id = request.nextUrl.searchParams.get("id");
   await Dashboard.findByIdAndDelete(id);

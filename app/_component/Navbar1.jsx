@@ -138,7 +138,9 @@ export default function Navbar1() {
                       <DropdownItem key="Dashboard">User</DropdownItem>
                     )}
                     <DropdownItem key="Dashboard">
-                      <Link href="/Dashboard" className="w-full">Dashboard</Link>
+                      <Link href="/Dashboard" className="w-full">
+                        Dashboard
+                      </Link>
                     </DropdownItem>
                     <DropdownItem>
                       <Link className="w-full" href="/Settings">
@@ -148,7 +150,9 @@ export default function Navbar1() {
 
                     <DropdownItem key="system">System</DropdownItem>
                     <DropdownItem key="configurations">
-                      Configurations
+                      <Link className="w-full" href="/LogIn">
+                        E'lon Log In
+                      </Link>
                     </DropdownItem>
 
                     <DropdownItem
