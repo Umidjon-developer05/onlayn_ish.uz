@@ -66,7 +66,7 @@ export default function Product({
   }, []);
 
   if (redirect) {
-    router.push("/InstructorAdmin/dashboard1");
+    router.push("/InstructorAdmin/dashboard");
     return null;
   }
 
