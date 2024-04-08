@@ -9,7 +9,7 @@ import {
   Link,
   Image,
 } from "@nextui-org/react";
-import axios from "axios";
+
 import { Button } from "../../components/ui/button";
 const Work = ({ filteredData }) => {
   
@@ -17,7 +17,7 @@ const Work = ({ filteredData }) => {
   return (
     <div className="p-4 flex flex-wrap gap-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       {filteredData?.map((project) => (
-        <Card className="sm:w-[500px]">
+        <Card className="sm:w-[500px]" key={project?._id}>
           <CardHeader className="flex gap-3">
             <p className="text-xl">{project?.title}</p>
           </CardHeader>
