@@ -71,8 +71,8 @@
     @apply border-border;
   }
   body {
-    height: 100vh;
     @apply bg-background text-foreground;
+    height: 100vh;
   }
 }
 ::-webkit-scrollbar {
