@@ -28,6 +28,9 @@ export default function Product({
   const session = useSession();
   async function createProduct(e) {
     e.preventDefault();
+    const name =session?.data?.user?.name;
+    const email = session?.data?.user?.email;
+    const image = session?.data?.user?.image;
     const data = {
       title,
       desription,
@@ -35,9 +38,9 @@ export default function Product({
       Date,
       price,
       category,
-      name: session?.data?.user?.name,
-      email: session?.data?.user?.email,
-      image: session?.data?.user?.image,
+      name,
+      email,
+      image,
     };
 
     try {
