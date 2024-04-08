@@ -31,30 +31,33 @@ export default function Product({
     const name =session?.data?.user?.name;
     const email = session?.data?.user?.email;
     const image = session?.data?.user?.image;
-    const data = {
-      title,
-      desription,
-      text,
-      Date,
-      price,
-      category,
-      name,
-      email,
-      image,
-    };
+   if (name && email && image) {
+    
+       const data = {
+         title,
+         desription,
+         text,
+         Date,
+         price,
+         category,
+         name,
+         email,
+         image,
+       };
+       try {
+         if (_id) {
+           await axios.put("/api/work", { ...data, _id });
+           toast.success("Work updated!!");
+         } else {
+           await axios.post("/api/work", data);
+           toast.success("Work created!!");
+         }
+         setRedirect(true);
+       } catch (error) {
+         console.error("Error creating/updating work:", error);
+       }
+   }
 
-    try {
-      if (_id) {
-        await axios.put("/api/work", { ...data, _id });
-        toast.success("Work updated!!");
-      } else {
-        await axios.post("/api/work", data);
-        toast.success("Work created!!");
-      }
-      setRedirect(true);
-    } catch (error) {
-      console.error("Error creating/updating work:", error);
-    }
   }
 
   useEffect(() => {
