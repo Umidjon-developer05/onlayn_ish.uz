@@ -31,14 +31,15 @@ export default function Product({
     const name =session?.data?.user?.name;
     const email = session?.data?.user?.email;
     const image = session?.data?.user?.image;
-   if (name && email && image) {
-    
+    const email1 = localStorage.getItem("email");
+   if (name && email && image && email1) {
        const data = {
          title,
          desription,
          text,
          Date,
          price,
+         email1,
          category,
          name,
          email,

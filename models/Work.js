@@ -6,6 +6,7 @@ const WorkFindSchema = new Schema({
   text: String,
   Date: String,
   price: String,
+  email1:String,
   name: String,
   email: String,
   image: String,

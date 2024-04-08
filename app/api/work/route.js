@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { mongooseConnect } from "../../../libs/mongoose";
 import { WorkFind } from "../../../models/Work";
 export async function POST(request) {
-  const { title, desription, name, price, email, image, category, text, Date } =
+  const { title, desription, name,email1, price, email, image, category, text, Date } =
     await request.json();
 
   try {
@@ -13,6 +13,7 @@ export async function POST(request) {
       desription,
       text,
       Date,
+      email1,
       price,
       category,
       name,

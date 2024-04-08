@@ -2,7 +2,6 @@
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
-const pageSize = 4;
 import {
   Table,
   TableHeader,
@@ -11,30 +10,30 @@ import {
   TableRow,
   TableCell,
   Pagination,
-  getKeyValue,
-  user,
 } from "@nextui-org/react";
 import { Button } from "../../components/ui/button";
 export default function WorkPost() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   useEffect(() => {
     axios.get("/api/work").then((response) => {
       setProducts(response?.data);
-      setLoading(false);
     });
   }, []);
+
   const rowsPerPage = 4;
-
-  const pages = Math.ceil(products.length / rowsPerPage);
-
   const items = useMemo(() => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
     console.log(start, end);
     return products.slice(start, end);
   }, [page, products]);
+  const filteredData = items?.filter((user) => {
+    const email = localStorage.getItem("email");
+    return user?.email1 === email;
+  });
+  const pages = Math.ceil(filteredData.length / rowsPerPage);
+
   return (
     <>
       <header>
@@ -93,7 +92,7 @@ export default function WorkPost() {
                   <TableColumn key="Date">Date</TableColumn>
                   <TableColumn key="">Action</TableColumn>
                 </TableHeader>
-                <TableBody items={items}>
+                <TableBody items={filteredData}>
                   {(item) => (
                     <TableRow key={item._id}>
                       <TableCell>{item.title}</TableCell>
