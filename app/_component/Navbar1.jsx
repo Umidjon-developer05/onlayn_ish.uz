@@ -72,14 +72,14 @@ export default function Navbar1() {
         />
       </NavbarContent>
       <div className=" flex gap-16  items-center sm:w-[1200px] justify-center">
-        <NavbarContent className="sm:hidden pr-3" justify="center">
+        <NavbarContent className="sm:hidden" justify="center">
           <NavbarBrand>
             <AcmeLogo />
             <p className="font-bold text-inherit">ACME</p>
           </NavbarBrand>
         </NavbarContent>
 
-        <div className="flex fixed container p-10 h-full justify-between items-center w-full">
+        <div className="flex fixed container  sm:h-full justify-between items-center ">
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             <NavbarBrand>
               <AcmeLogo />
@@ -102,10 +102,10 @@ export default function Navbar1() {
             </NavbarItem>
           </NavbarContent>
 
-          <NavbarContent justify="end">
+          <NavbarContent justify="center" className="hidden sm:flex">
             <NavbarItem>
               {sesison.data?.user ? (
-                <Dropdown placement="bottom-start">
+                <Dropdown placement="bottom-start" className="">
                   <DropdownTrigger>
                     <Avatar
                       isBordered
@@ -113,7 +113,6 @@ export default function Navbar1() {
                       className="transition-transform"
                       color="secondary"
                       name="Jason Hughes"
-                      size="sm"
                       src={sesison.data?.user?.image}
                     />
                   </DropdownTrigger>
@@ -131,7 +130,7 @@ export default function Navbar1() {
                     sesison.data?.user?.email ===
                       process?.env.NEXT_PUBLIC_GITHUB ? (
                       <DropdownItem key="Dashboard">
-                        <Link href="/admin-dashboard" className="w-full">
+                        <Link href="/admin-dashboard" >
                           Admin
                         </Link>
                       </DropdownItem>
