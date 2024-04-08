@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 import Link from "next/link";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, use } from "react";
 import {
   Table,
   TableHeader,
@@ -22,17 +22,19 @@ export default function WorkPost() {
   }, []);
 
   const rowsPerPage = 4;
+  const email = localStorage.getItem("email");
+
+  const filteredData = products?.filter((user) => {
+    return user.email1 === email;
+  });
   const items = useMemo(() => {
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
     console.log(start, end);
-    return products.slice(start, end);
-  }, [page, products]);
-  const filteredData = items?.filter((user) => {
-    const email = localStorage.getItem("email");
-    return user?.email1 === email;
-  });
-  const pages = Math.ceil(filteredData.length / rowsPerPage);
+    return filteredData.slice(start, end);
+  }, [page, filteredData]);
+
+  const pages = Math.ceil(filteredData?.length / rowsPerPage);
 
   return (
     <>
@@ -92,8 +94,8 @@ export default function WorkPost() {
                   <TableColumn key="Date">Date</TableColumn>
                   <TableColumn key="">Action</TableColumn>
                 </TableHeader>
-                <TableBody items={filteredData}>
-                  {(item) => (
+                <TableBody>
+                  {items?.map((item) => (
                     <TableRow key={item._id}>
                       <TableCell>{item.title}</TableCell>
                       <TableCell>{item.desription}</TableCell>
@@ -112,7 +114,7 @@ export default function WorkPost() {
                         </Link>
                       </TableCell>
                     </TableRow>
-                  )}
+                  ))}
                 </TableBody>
               </Table>
             </>
