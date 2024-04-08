@@ -24,7 +24,7 @@ export default function EditProduct() {
   }, [id]);
 
   function goBack() {
-    router.push("/InstructorAdmin/dashboard1");
+    router.push("/InstructorAdmin/dashboard");
   }
   async function deleteProduct() {
     await axios.delete("/api/work?id=" + id);
