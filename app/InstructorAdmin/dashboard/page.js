@@ -102,12 +102,12 @@ export default function WorkPost() {
                       <TableCell>{item.Date}</TableCell>
                       <TableCell className="flex gap-2">
                         <Link
-                          href={`/InstructorAdmin/dashboard1/edit/${item._id}`}
+                          href={`/InstructorAdmin/dashboard/edit/${item._id}`}
                         >
                           <Button variant="outline">Edit</Button>
                         </Link>
                         <Link
-                          href={`/InstructorAdmin/dashboard1/delete/${item._id}`}
+                          href={`/InstructorAdmin/dashboard/delete/${item._id}`}
                         >
                           <Button variant="destructive">Delete</Button>
                         </Link>
