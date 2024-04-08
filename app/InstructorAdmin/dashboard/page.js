@@ -42,7 +42,7 @@ export default function WorkPost() {
           <div>
             <div>
               <Link
-                href={"/InstructorAdmin/dashboard1/new1"}
+                href={"/InstructorAdmin/dashboard/new1"}
                 className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-green-600 px-5 py-3 text-green-600 transition hover:bg-green-50 hover:text-green-700 focus:outline-none focus:ring"
                 type="button"
               >
