@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { mongooseConnect } from "../../../libs/mongoose";
 import { WorkFind } from "../../../models/Work";
 export async function POST(request) {
-  const { title, desription, text, Date } = await request.json();
+  const { title, desription, name, price, email, image, category, text, Date } =
+    await request.json();
 
   try {
     await mongooseConnect();
@@ -12,6 +13,11 @@ export async function POST(request) {
       desription,
       text,
       Date,
+      price,
+      category,
+      name,
+      email,
+      image,
     });
 
     return NextResponse.json(
@@ -31,11 +37,22 @@ export async function GET() {
 
 export async function PUT(request) {
   try {
-    const { title, desription, text, Date, _id } = await request.json();
+    const {
+      title,
+      desription,
+      price,
+      name,
+      email,
+      image,
+      text,
+      category,
+      Date,
+      _id,
+    } = await request.json();
 
     const categoryDoc = await WorkFind.updateOne(
       { _id },
-      { title, desription, text, Date }
+      { title, desription, price, name, email, image, category, text, Date }
     );
 
     return NextResponse.json({ categoryDoc });
