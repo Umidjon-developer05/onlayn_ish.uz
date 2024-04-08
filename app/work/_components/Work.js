@@ -80,7 +80,7 @@ const Work = ({ filteredData }) => {
             </p>
           </CardBody>
           <Divider />
-          <CardFooter className="flex gap-5 justify-between items-center">
+          <CardFooter className="flex flex-wrap gap-5 justify-between items-center">
             <div className="flex gap-2">
               <Image
                 alt="nextui logo"
