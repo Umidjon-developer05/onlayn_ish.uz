@@ -153,7 +153,7 @@ const Work = ({ filteredData }) => {
                         <p className="text-red-500 text-sm font-medium">
                           {" "}
                           Iltimos taklif yuborsangiz telefon raqamingizni
-                          to'g'ri yuboring siz bilan bog'lanishadi
+                          togri yuboring siz bilan bog'lanishadi
                         </p>
                       </AlertDialogTitle>
                       <AlertDialogDescription className="flex flex-col gap-4">
@@ -167,10 +167,10 @@ const Work = ({ filteredData }) => {
                         </div>
                         <div className="flex flex-col gap-2">
                           <Label htmlFor="terms">
-                            Qo'shimcha matn (shart emas)
+                            Qoshimcha matn (shart emas)
                           </Label>
                           <Textarea
-                            placeholder="Qo'shimcha matn..."
+                            placeholder="Qoshimcha matn..."
                             {...register("text")}
                           />
                         </div>
