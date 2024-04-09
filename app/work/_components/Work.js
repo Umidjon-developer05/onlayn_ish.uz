@@ -6,13 +6,57 @@ import {
   CardBody,
   CardFooter,
   Divider,
-  Link,
   Image,
 } from "@nextui-org/react";
-
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "../../components/ui/alert-dialog";
+import { Input } from "../../components/ui/input";
 import { Button } from "../../components/ui/button";
+import { Label } from "../../components/ui/label";
+import { Textarea } from "../../components/ui/textarea";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 const Work = ({ filteredData }) => {
-  
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data, project) => {
+    try {
+      const res = await fetch("/api/offer", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          phone: data.phone,
+          text: data.text,
+          name: project.name,
+          email: project.email,
+          image: project.image,
+        }),
+      });
+
+      if (res.ok) {
+        toast.success("offer created successfully");
+        reset();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="p-4 flex flex-wrap gap-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
@@ -50,13 +94,13 @@ const Work = ({ filteredData }) => {
               </svg>
               <span>{project?.price}</span>
             </p>
-            <p className="flex gap-2 items-center ">
+            <p className="flex gap-2 items-center  justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="45"
-                height="30"
+                width="25"
+                height="25"
                 fill="currentColor"
-                class="bi bi-card-text text-green-500"
+                class="bi bi-card-text text-green-500 "
                 viewBox="0 0 16 16"
               >
                 <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
@@ -80,7 +124,7 @@ const Work = ({ filteredData }) => {
             </p>
           </CardBody>
           <Divider />
-          <CardFooter className="flex flex-wrap gap-5 justify-between items-center">
+          <CardFooter className="flex w-full  flex-wrap gap-5 justify-between items-center">
             <div className="flex gap-2">
               <Image
                 alt="nextui logo"
@@ -94,8 +138,51 @@ const Work = ({ filteredData }) => {
                 <p className="text-sm text-default-500">{project?.email}</p>
               </div>
             </div>
-            <div>
-              <Button>Taklif yuborish</Button>
+            <div className=" flex justify-end ">
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button variant="outline">Taklif Yuborish</Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <form
+                    onSubmit={handleSubmit((data) => onSubmit(data, project))}
+                  >
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>
+                        {project?.name}
+                        <p className="text-red-500 text-sm font-medium">
+                          {" "}
+                          Iltimos taklif yuborsangiz telefon raqamingizni
+                          to'g'ri yuboring siz bilan bog'lanishadi
+                        </p>
+                      </AlertDialogTitle>
+                      <AlertDialogDescription className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-2">
+                          <Label htmlFor="terms">Telefon</Label>
+                          <Input
+                            type="text"
+                            placeholder="+998"
+                            {...register("phone")}
+                          />
+                        </div>
+                        <div className="flex flex-col gap-2">
+                          <Label htmlFor="terms">
+                            Qo'shimcha matn (shart emas)
+                          </Label>
+                          <Textarea
+                            placeholder="Qo'shimcha matn..."
+                            {...register("text")}
+                          />
+                        </div>
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter className={"mt-3"}>
+                      <AlertDialogCancel>Bekor qilish</AlertDialogCancel>
+                      <Button>Yuborish</Button>
+                    </AlertDialogFooter>
+                  </form>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </CardFooter>
         </Card>

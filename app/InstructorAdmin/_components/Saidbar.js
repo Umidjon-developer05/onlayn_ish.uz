@@ -18,7 +18,7 @@ export default function LampDemo() {
   const router = useRouter();
   function SignOut() {
     localStorage.removeItem("token");
-
+    localStorage.removeItem("email");
     router.push("/");
   }
   return (

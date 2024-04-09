@@ -16,7 +16,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   useEffect(() => {
-    axios.get("/api/Users").then((response) => {
+    axios.get("/api/usersfind").then((response) => {
       setUsers(response?.data);
     });
   }, []);
@@ -59,7 +59,6 @@ const Users = () => {
         <TableHeader>
           <TableColumn key="name">NAME</TableColumn>
           <TableColumn key="email">email</TableColumn>
-          <TableColumn key="IsAdmin">ROLE</TableColumn>
         </TableHeader>
         <TableBody items={items}>
           {(item) => (
