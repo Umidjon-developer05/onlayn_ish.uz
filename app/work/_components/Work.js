@@ -153,7 +153,7 @@ const Work = ({ filteredData }) => {
                         <p className="text-red-500 text-sm font-medium">
                           {" "}
                           Iltimos taklif yuborsangiz telefon raqamingizni
-                          togri yuboring siz bilan bog'lanishadi
+                          togri yuboring siz bilan boglanishadi
                         </p>
                       </AlertDialogTitle>
                       <AlertDialogDescription className="flex flex-col gap-4">
