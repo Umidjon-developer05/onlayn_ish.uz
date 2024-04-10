@@ -62,10 +62,10 @@ const Petition = () => {
           </div>
         </div>
 
-        <div className="mt-10 w-full flex flex-col gap-8 items-center ">
+        <div className="mt-10 w-full flex flex-col gap-2 items-center ">
           <div>
             <form
-              className="flex flex-col gap-2"
+              className="flex flex-col gap-8"
               onSubmit={handleSubmit(onSubmit)}
             >
               <Label className="flex justify-start">Ismi</Label>
