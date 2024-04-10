@@ -71,7 +71,7 @@ const Petition = () => {
               <Label className="flex justify-start">Ismi</Label>
               <Input
                 type="text"
-                className=" sm:w-[500px]"
+                className=" sm:w-[800px] sm:h-[50px]"
                 placeholder="Ismi..."
                 {...register("firstName")}
               />
@@ -79,13 +79,13 @@ const Petition = () => {
               <Input
                 type="text"
                 {...register("phone")}
-                className=" sm:w-[500px]"
+                className=" sm:w-[800px] sm:h-[50px]"
                 placeholder="+998"
               />
               <Label className="flex justify-start">CV url</Label>
               <Input
                 type="url"
-                className=" sm:w-[500px]"
+                className=" sm:w-[800px] sm:h-[50px]"
                 {...register("url")}
                 placeholder="Cv...."
               />
