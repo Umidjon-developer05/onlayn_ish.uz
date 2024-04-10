@@ -92,7 +92,7 @@ export default function Navbar1() {
         <NavbarContent className="sm:hidden" justify="center">
           <NavbarBrand>
             <AcmeLogo />
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-bold text-inherit">Onlayn_ish.uz</p>
           </NavbarBrand>
         </NavbarContent>
 
@@ -101,7 +101,7 @@ export default function Navbar1() {
             <NavbarBrand>
               <AcmeLogo />
               <Link href="/" className="font-bold text-inherit">
-                ACME
+              Onlayn_ish.uz
               </Link>
             </NavbarBrand>
 
