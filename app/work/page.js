@@ -89,7 +89,7 @@ function Work1() {
               ))
             : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(
                 (item, index) => (
-                  <div className="w-full flex flex-col ">
+                  <div className="w-full flex flex-col " key={index}>
                     <Skeleton className="h-8 w-4/5 rounded-lg mt-2" />
                   </div>
                 )
