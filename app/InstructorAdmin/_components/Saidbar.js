@@ -68,12 +68,18 @@ export default function LampDemo() {
         <p>Xush kelibsiz admin panelga.</p>
       </CardBody>
       <Divider />
-      <CardFooter>
+      <CardFooter className="flex gap-4">
         <Link
-          href="/InstructorAdmin/dashboard"
+          href="/InstructorAdmin/dashboard1"
           className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
         >
           Dashboard
+        </Link>
+        <Link
+          href="/InstructorAdmin/Offer"
+          className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
+        >
+          Offer
         </Link>
       </CardFooter>
     </Card>
