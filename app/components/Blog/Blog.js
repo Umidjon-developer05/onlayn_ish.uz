@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../../components/ui/button";
 const Blog = () => {
   return (
-    <section className="slider_section ">
+    <section className="slider_section mt-10 ">
       <div className="flex container  justify-between items-center  flex-wrap">
         <div className="sm:w-[500px] flex flex-col gap-8">
           <h1 className="sm:text-5xl">
