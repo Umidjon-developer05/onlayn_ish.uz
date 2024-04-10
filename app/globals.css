@@ -71,9 +71,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
     height: 100vh;
   }
+}
+body {
+  height: 100vh;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -155,8 +157,6 @@
   position: relative;
 }
 
-
-
 #ring {
   width: 190px;
   height: 190px;
@@ -181,7 +181,7 @@
 }
 
 #ring:nth-child(2) {
-  border-bottom: 8px solid rgb(255,65,106);
+  border-bottom: 8px solid rgb(255, 65, 106);
   animation: rotate2 2s linear infinite;
 }
 
@@ -196,7 +196,7 @@
 }
 
 #ring:nth-child(3) {
-  border-bottom: 8px solid rgb(0,255,255);
+  border-bottom: 8px solid rgb(0, 255, 255);
   animation: rotate3 2s linear infinite;
 }
 
@@ -222,5 +222,123 @@
 
   to {
     transform: rotateX(70deg) rotateZ(630deg);
+  }
+}
+/* slider section */
+.slider_section {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  position: relative;
+}
+
+.slider_section .img-box {
+  margin: 45px 0;
+}
+
+.slider_section .img-box img {
+  width: 100%;
+  -webkit-animation: upDown 5s infinite;
+  animation: upDown 5s infinite;
+}
+
+@-webkit-keyframes upDown {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+  }
+  50% {
+    -webkit-transform: translateY(45px);
+    transform: translateY(45px);
+  }
+  100% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+  }
+  50% {
+    -webkit-transform: translateY(45px);
+    transform: translateY(45px);
+  }
+  100% {
+    -webkit-transform: translateY(-45px);
+    transform: translateY(-45px);
+  }
+}
+/* font google */
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit&family=Whisper&display=swap");
+/* end font */
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 35px;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.animate-charcter1 {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    green 29%,
+    #ff1361 67%,
+    yellow 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+  font-size: 60px;
+  font-family: "Whisper", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@media (max-width: 1200px) {
+  .animate-charcter {
+    font-size: 20px;
+  }
+  .animate-charcter1 {
+    font-size: 20px;
   }
 }
