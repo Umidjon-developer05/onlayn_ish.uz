@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Checkbox } from "@nextui-org/react";
+import { Checkbox, Skeleton } from "@nextui-org/react";
 import axios from "axios";
 import Work from "./_components/Work";
 function Work1() {
@@ -73,17 +73,27 @@ function Work1() {
           >
             All
           </Checkbox>
-          {work?.map((item, index) => (
-            <p className="flex gap-2 mt-2 items-center" key={index}>
-              <Checkbox
-                checked={selectedPosition === item?._id}
-                onClick={() => handlePostionChange(item?._id)}
-                defaultChecked={selectedPosition === item?._id ? true : false}
-              >
-                {item?.name}
-              </Checkbox>
-            </p>
-          ))}
+          {work.length > 0 && work
+            ? work?.map((item, index) => (
+                <p className="flex gap-2 mt-2 items-center" key={index}>
+                  <Checkbox
+                    checked={selectedPosition === item?._id}
+                    onClick={() => handlePostionChange(item?._id)}
+                    defaultChecked={
+                      selectedPosition === item?._id ? true : false
+                    }
+                  >
+                    {item?.name}
+                  </Checkbox>
+                </p>
+              ))
+            : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(
+                (item, index) => (
+                  <div className="w-full flex flex-col ">
+                    <Skeleton className="h-8 w-4/5 rounded-lg mt-2" />
+                  </div>
+                )
+              )}
         </div>
       </aside>
       {open ? (

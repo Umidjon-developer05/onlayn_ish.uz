@@ -46,17 +46,34 @@ export default function Navbar1() {
       name: "Profile",
       href: "/profile",
     },
-    {
-      name: "Logout",
-      href: "/",
-    },
+
     {
       name: "Dashboard",
       href: "/Dashboard",
     },
     {
+      name: " Ish",
+      href: "/work",
+    },
+    {
+      name: " Ishga Ariza",
+      href: "/petition",
+    },
+    {
+      name: " Elon LogIn",
+      href: "/LogIn",
+    },
+    {
       name: "Settings",
       href: "/Settings",
+    },
+    {
+      name: "SingIn",
+      href: "/SingIn",
+    },
+    {
+      name: "Logout",
+      href: "/",
     },
   ];
 
@@ -83,21 +100,19 @@ export default function Navbar1() {
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             <NavbarBrand>
               <AcmeLogo />
-              <p className="font-bold text-inherit">ACME</p>
+              <Link href="/" className="font-bold text-inherit">
+                ACME
+              </Link>
             </NavbarBrand>
-            <NavbarItem>
-              <Link color="foreground" href="#">
-                Features
-              </Link>
-            </NavbarItem>
-            <NavbarItem isActive>
-              <Link href="#" aria-current="page">
-                Customers
-              </Link>
-            </NavbarItem>
+
             <NavbarItem>
               <Link color="foreground" href="/work">
-                Work
+                ish
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link color="foreground" href="/petition">
+                Ishga Ariza
               </Link>
             </NavbarItem>
           </NavbarContent>
@@ -130,9 +145,7 @@ export default function Navbar1() {
                     sesison.data?.user?.email ===
                       process?.env.NEXT_PUBLIC_GITHUB ? (
                       <DropdownItem key="Dashboard">
-                        <Link href="/admin-dashboard" >
-                          Admin
-                        </Link>
+                        <Link href="/admin-dashboard">Admin</Link>
                       </DropdownItem>
                     ) : (
                       <DropdownItem key="Dashboard">Profile</DropdownItem>
@@ -194,17 +207,20 @@ export default function Navbar1() {
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={index} className="pt-2">
             <Link
               className="w-full"
               color={
-                index === 2
+                index === 5
                   ? "warning"
-                  : index === menuItems.length - 3
+                  : index === menuItems.length - 1
                   ? "danger"
                   : "foreground"
               }
-              href="#"
+              onClick={() =>
+                index === menuItems.length - 1 ? SingOut() : null
+              }
+              href={item?.href}
               size="lg"
             >
               {item.name}
