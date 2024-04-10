@@ -62,7 +62,7 @@ const Petition = () => {
           </div>
         </div>
 
-        <div className="mt-10 w-full flex flex-col gap-3 items-center ">
+        <div className="mt-10 w-full flex flex-col gap-8 items-center ">
           <div>
             <form
               className="flex flex-col gap-2"
