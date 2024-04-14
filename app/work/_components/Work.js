@@ -97,7 +97,7 @@ const Work = ({ filteredData }) => {
                   </svg>
                   <span>{project?.price}</span>
                 </p>
-                <p className="flex gap-2 items-center  justify-start">
+                <p className="flex gap-2 items-center  ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -109,7 +109,7 @@ const Work = ({ filteredData }) => {
                     <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
                     <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
                   </svg>
-                  <span className="text-sm ">{project?.text}</span>
+                  <span className="text-sm sm:w-[200px] ">{project?.text}</span>
                 </p>
                 <p className="flex gap-2 items-center ">
                   <svg
