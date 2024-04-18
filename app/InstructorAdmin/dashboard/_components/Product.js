@@ -26,8 +26,7 @@ export default function Product({
   const router = useRouter();
   const [redirect, setRedirect] = useState(false);
   const session = useSession();
-  async function createProduct(e) {
-    e.preventDefault();
+  async function CreateProduct() {
     const name =session?.data?.user?.name;
     const email = session?.data?.user?.email;
     const image = session?.data?.user?.image;
@@ -166,8 +165,7 @@ export default function Product({
 
         {/* Submit button */}
         <button
-          type="submit"
-          onClick={(e)=>createProduct(e)}
+          onClick={()=>CreateProduct()}
           className="bg-transparent transition-all w-full mt-10 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded"
         >
           Save
