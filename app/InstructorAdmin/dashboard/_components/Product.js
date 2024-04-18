@@ -22,16 +22,18 @@ export default function Product({
   const [category, setCategory] = useState(existingCategory || "");
   const [price, setPrice] = useState(existingPrice || "");
   const [categories, setCategories] = useState([]);
-
+  const [loading, setLoading] = useState(false); 
   const router = useRouter();
   const [redirect, setRedirect] = useState(false);
   const session = useSession();
   async function CreateProduct() {
+    setLoading(true); 
     const name =session?.data?.user?.name;
     const email = session?.data?.user?.email;
     const image = session?.data?.user?.image;
     const email1 = localStorage.getItem("email");
    if (name && email && image && email1) {
+    setLoading(false); 
        const data = {
          title,
          desription,
@@ -169,7 +171,7 @@ export default function Product({
           onClick={() => CreateProduct()}
           className="bg-transparent mb-20 transition-all w-full mt-10 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded"
         >
-          Save work 
+        {loading ? "Loading..." : "Save work"} 
         </button>
       </div>
     </div>
