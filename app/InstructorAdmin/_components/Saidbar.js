@@ -62,6 +62,7 @@ export default function LampDemo() {
           </Button>
         </div>
       </CardHeader>
+
       <Divider />
       <CardBody>
         <p>Xush kelibsiz admin panelga.</p>
@@ -72,21 +73,15 @@ export default function LampDemo() {
           href="/InstructorAdmin/dashboard"
           className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
         >
-          <Button
-            style={{ all: "unset" }}
-          >
+          
             Dashboard
-          </Button>
         </Link>
         <Link
           href="/InstructorAdmin/Offer"
           className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
         >
-          <Button
-            style={{ all: "unset" }}
-          >
+          
             Offer
-          </Button>
         </Link>
       </CardFooter>
     </Card>
