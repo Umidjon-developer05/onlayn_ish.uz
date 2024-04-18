@@ -78,7 +78,7 @@ export default function Product({
 
   return (
     <div>
-      <div className="w-full mx-5" >
+      <div className="sm:w-[1200px] mx-5" >
         {/* Title input */}
         <div className="items-center my-4">
           <label className="text-lg font-medium mb-3">Title</label>
@@ -165,8 +165,8 @@ export default function Product({
 
         {/* Submit button */}
         <button
-        type="button"
-           onClick={() => CreateProduct()}
+          type="button"
+          onSubmit={() => CreateProduct()}
           className="bg-transparent transition-all w-full mt-10 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded"
         >
           Save work 
