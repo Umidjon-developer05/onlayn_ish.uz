@@ -31,10 +31,10 @@ export default function LampDemo() {
               height={40}
               radius="full"
               src={
-                session?.data?.user?.image ? (
-                  session?.data?.user?.image
-                ) : (
+                session.status === "loading" ? (
                   <Skeleton className="flex rounded-full w-12 h-12" />
+                ) : (
+                  session?.data?.user?.image
                 )
               }
               width={40}
@@ -42,10 +42,10 @@ export default function LampDemo() {
           </div>
           <div className="flex flex-col ">
             <p className="text-md">
-              {session?.data?.user?.name ? (
-                session?.data?.user?.name
-              ) : (
+              {session.status === "loading" ? (
                 <Skeleton className="h-3 w-full rounded-lg" />
+              ) : (
+                session?.data?.user?.name
               )}
             </p>
             <p className="text-small text-default-500">
@@ -70,16 +70,26 @@ export default function LampDemo() {
       <Divider />
       <CardFooter className="flex gap-4">
         <Link
-          href="/InstructorAdmin/dashboard"
+          href="/InstructorAdmin/dashboard1"
           className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
         >
-          Dashboard
+          <Button
+            style={{ all: "unset" }}
+            disabled={session.status === "loading" ? true : false}
+          >
+            Dashboard
+          </Button>
         </Link>
         <Link
           href="/InstructorAdmin/Offer"
           className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
         >
-          Offer
+          <Button
+            style={{ all: "unset" }}
+            disabled={session.status === "loading" ? true : false}
+          >
+            Offer
+          </Button>
         </Link>
       </CardFooter>
     </Card>
