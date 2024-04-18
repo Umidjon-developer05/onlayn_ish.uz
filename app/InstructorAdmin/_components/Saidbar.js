@@ -75,7 +75,6 @@ export default function LampDemo() {
         >
           <Button
             style={{ all: "unset" }}
-            disabled={session.status === "loading" ? true : false}
           >
             Dashboard
           </Button>
@@ -86,7 +85,6 @@ export default function LampDemo() {
         >
           <Button
             style={{ all: "unset" }}
-            disabled={session.status === "loading" ? true : false}
           >
             Offer
           </Button>
