@@ -79,7 +79,7 @@ export default function Product({
 
   return (
     <div>
-      <form className="sm:w-[1100px] mx-10" >
+      <div className="sm:w-[1100px] mx-10" >
         {/* Title input */}
         <div className="items-center my-4">
           <label className="text-lg font-medium mb-3">Title</label>
@@ -172,7 +172,7 @@ export default function Product({
         >
           Save
         </button>
-      </form>
+      </div>
     </div>
   );
 }
