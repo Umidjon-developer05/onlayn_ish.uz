@@ -39,7 +39,7 @@ export default function WorkPost() {
   return (
     <>
       <header>
-        <div className="mx-auto  flex flex-col    w-full  ">
+        <div className="mx-auto  flex flex-col    w-full ">
           <div>
             <div>
               <Link

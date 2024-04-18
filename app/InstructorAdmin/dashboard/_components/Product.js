@@ -78,7 +78,7 @@ export default function Product({
 
   return (
     <div>
-      <div className="w-full mx-10" >
+      <div className="w-full mx-5" >
         {/* Title input */}
         <div className="items-center my-4">
           <label className="text-lg font-medium mb-3">Title</label>

@@ -3,10 +3,8 @@ import Product from "../_components/Product";
 export default function NewProduct() {
   return (
     <>
-      <section className="p-4">
-        <div>
+      <section >
           <Product />
-        </div>
       </section>
     </>
   );
