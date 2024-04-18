@@ -62,7 +62,6 @@ export default function LampDemo() {
           </Button>
         </div>
       </CardHeader>
-
       <Divider />
       <CardBody>
         <p>Xush kelibsiz admin panelga.</p>
