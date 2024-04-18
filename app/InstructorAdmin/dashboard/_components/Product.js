@@ -25,14 +25,11 @@ export default function Product({
   const [loading, setLoading] = useState(false); 
   const router = useRouter();
   const [redirect, setRedirect] = useState(false);
-  const session = useSession();
   async function CreateProduct() {
     setLoading(true); 
-    const name =session?.data?.user?.name;
-    const email = session?.data?.user?.email;
-    const image = session?.data?.user?.image;
+  
     const email1 = localStorage.getItem("email");
-   if (name && email && image && email1) {
+   if ( email1) {
     setLoading(false); 
        const data = {
          title,
@@ -42,9 +39,6 @@ export default function Product({
          price,
          email1,
          category,
-         name,
-         email,
-         image,
        };
        try {
          if (_id) {
