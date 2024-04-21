@@ -64,7 +64,7 @@ const Work = ({ filteredData }) => {
       {filteredData && filteredData.length > 0 ? (
         <div className="flex flex-wrap justify-around gap-5">
           {filteredData?.map((project) => (
-            <Card className="sm:w-[500px]" key={project?._id}>
+            <Card className="sm:w-full" key={project?._id}>
               <CardHeader className="flex gap-3">
                 <p className="text-xl">{project?.title}</p>
               </CardHeader>
