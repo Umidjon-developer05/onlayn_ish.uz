@@ -56,6 +56,10 @@ export default function Navbar1() {
       href: "/work",
     },
     {
+      name: " Bozor",
+      href: "/Bozor",
+    },
+    {
       name: " Ishga Ariza",
       href: "/petition",
     },
@@ -108,6 +112,11 @@ export default function Navbar1() {
             <NavbarItem>
               <Link color="foreground" href="/work">
                 ish
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link color="foreground" href="/Bozor">
+                Bozor
               </Link>
             </NavbarItem>
             <NavbarItem>

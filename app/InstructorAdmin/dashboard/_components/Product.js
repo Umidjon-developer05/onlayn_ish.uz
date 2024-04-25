@@ -27,7 +27,6 @@ export default function Product({
   const [redirect, setRedirect] = useState(false);
   async function CreateProduct() {
     setLoading(true); 
-  
     const email1 = localStorage.getItem("email");
    if ( email1) {
     setLoading(false); 
