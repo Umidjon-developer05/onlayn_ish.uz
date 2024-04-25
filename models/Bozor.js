@@ -1,4 +1,4 @@
-import  { model, Schema, models } from "mongoose";
+import mongoose, { model, Schema, models } from "mongoose";
 
 const BozorFindSchema = new Schema({
   title: String,
@@ -6,10 +6,11 @@ const BozorFindSchema = new Schema({
   text: String,
   Date: String,
   price: String,
-  email1:String,
+  email1: String,
   name: String,
   email: String,
   image: String,
+  category: { type: mongoose.Types.ObjectId, ref: "Category" },
 });
 
-export const Bozorfind = models?.Bozorfind || model("Bozorfind", BozorFindSchema);
+export const BozorFind = models?.BozorFind || model("BozorFind", BozorFindSchema);
