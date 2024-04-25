@@ -73,15 +73,19 @@ export default function LampDemo() {
           href="/InstructorAdmin/dashboard"
           className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
         >
-          
-            Dashboard
+          Dashboard
+        </Link>
+        <Link
+          href="/InstructorAdmin/bozor"
+          className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
+        >
+          Bozor
         </Link>
         <Link
           href="/InstructorAdmin/Offer"
           className="bg-gradient-to-tr p-2 rounded-lg from-pink-500 to-yellow-500 text-white shadow-lg"
         >
-          
-            Offer
+          Offer
         </Link>
       </CardFooter>
     </Card>

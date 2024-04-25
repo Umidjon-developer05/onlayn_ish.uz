@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import Telegram from "./_component/Telegram";
 import "./globals.css";
 import GlobalState from "./context/context";
+import "@uploadthing/react/styles.css";
 function RootLayout({ children }) {
   return (
     <html lang="en">

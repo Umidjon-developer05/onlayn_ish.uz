@@ -18,6 +18,7 @@ import {
 } from "@nextui-org/react";
 import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Settings from "../Settings/page";
 export const AcmeLogo = () => (
   <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
     <path
@@ -48,7 +49,7 @@ export default function Navbar1() {
     },
 
     {
-      name: "Dashboard",
+      name: "  Elon narxi",
       href: "/Dashboard",
     },
     {
@@ -67,10 +68,7 @@ export default function Navbar1() {
       name: " Elon LogIn",
       href: "/LogIn",
     },
-    {
-      name: "Settings",
-      href: "/Settings",
-    },
+
     {
       name: "SingIn",
       href: "/SingIn",
@@ -87,25 +85,29 @@ export default function Navbar1() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        />
-      </NavbarContent>
-      <div className=" flex gap-16  items-center sm:w-[1200px] justify-center">
-        <NavbarContent className="sm:hidden" justify="center">
-          <NavbarBrand>
-            <AcmeLogo />
-            <p className="font-bold text-inherit">Onlayn_ish.uz</p>
-          </NavbarBrand>
+      <div className="sm:hidden">
+        <NavbarContent justify="start">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
         </NavbarContent>
+      </div>
+      <div className=" flex gap-16  items-center sm:w-[1200px] justify-center">
+        <div className="sm:hidden">
+          <NavbarContent justify="center">
+            <NavbarBrand>
+              <AcmeLogo />
+              <p className="font-bold text-inherit">Onlayn_ish.uz</p>
+            </NavbarBrand>
+          </NavbarContent>
+        </div>
 
         <div className="flex fixed container  sm:h-full justify-between items-center ">
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
             <NavbarBrand>
               <AcmeLogo />
               <Link href="/" className="font-bold text-inherit">
-              Onlayn_ish.uz
+                Onlayn_ish.uz
               </Link>
             </NavbarBrand>
 
@@ -127,6 +129,7 @@ export default function Navbar1() {
           </NavbarContent>
 
           <NavbarContent justify="center" className="hidden sm:flex">
+            <Settings />
             <NavbarItem>
               {sesison.data?.user ? (
                 <Dropdown placement="bottom-start" className="">
@@ -161,16 +164,10 @@ export default function Navbar1() {
                     )}
                     <DropdownItem key="Dashboard">
                       <Link href="/Dashboard" className="w-full">
-                        Dashboard
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Link className="w-full" href="/Settings">
-                        Settings
+                        Elon narxi
                       </Link>
                     </DropdownItem>
 
-                    <DropdownItem key="system">System</DropdownItem>
                     {token ? (
                       <DropdownItem key="system">
                         <Link href={`${token ? "/InstructorAdmin" : "/"}`}>

@@ -87,13 +87,11 @@ function Work1() {
                   </Checkbox>
                 </p>
               ))
-            : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(
-                (item, index) => (
-                  <div className="w-full flex flex-col " key={index}>
-                    <Skeleton className="h-8 w-4/5 rounded-lg mt-2" />
-                  </div>
-                )
-              )}
+            : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
+                <div className="w-full flex flex-col " key={index}>
+                  <Skeleton className="h-8 w-4/5 rounded-lg mt-2" />
+                </div>
+              ))}
         </div>
       </aside>
       {open ? (
@@ -121,9 +119,24 @@ function Work1() {
               </button>
             </div>
             <div class="h-screen flex justify-center flex-col  px-3 py-4 overflow-y-auto ">
+              <Checkbox
+                checked={selectedPosition === ""}
+                onClick={() => handlePostionChange("")}
+                defaultChecked
+              >
+                All
+              </Checkbox>
               {work?.map((item, index) => (
                 <p className="flex gap-2 mt-2 items-center" key={index}>
-                  <Checkbox defaultChecked>{item?.name}</Checkbox>
+                  <Checkbox
+                    checked={selectedPosition === item?._id}
+                    onClick={() => handlePostionChange(item?._id)}
+                    defaultChecked={
+                      selectedPosition === item?._id ? true : false
+                    }
+                  >
+                    {item?.name}
+                  </Checkbox>
                 </p>
               ))}
             </div>

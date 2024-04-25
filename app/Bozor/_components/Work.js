@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Card,
   CardHeader,
@@ -9,56 +9,8 @@ import {
   Image,
   Skeleton,
 } from "@nextui-org/react";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "../../components/ui/alert-dialog";
-import { Input } from "../../components/ui/input";
-import { Button } from "../../components/ui/button";
-import { Label } from "../../components/ui/label";
-import { Textarea } from "../../components/ui/textarea";
-import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
+
 const Work = ({ filteredData }) => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = async (data, project) => {
-    try {
-      const res = await fetch("/api/offer", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          phone: data.phone,
-          text: data.text,
-          name: project.name,
-          email: project.email,
-          image: project.image,
-        }),
-      });
-
-      if (res.ok) {
-        toast.success("offer created successfully");
-        reset();
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   return (
     <div className="p-4  gap-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       {filteredData && filteredData.length > 0 ? (
@@ -66,7 +18,10 @@ const Work = ({ filteredData }) => {
           {filteredData?.map((project) => (
             <Card className="sm:w-[500px] " key={project?._id}>
               <CardHeader className="flex gap-3">
-                <p className="text-xl">{project?.title}</p>
+                <img
+                  src={project?.image}
+                  className="w-full rounded-lg sm:h-[300px]"
+                />
               </CardHeader>
               <Divider />
               <CardBody className="flex flex-col gap-3">
@@ -76,11 +31,23 @@ const Work = ({ filteredData }) => {
                     width="25"
                     height="25"
                     fill="currentColor"
-                    className="bi bi-geo-alt text-green-500"
+                    className="bi bi-blockquote-right text-green-500"
                     viewBox="0 0 16 16"
                   >
-                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                    <path d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1zm10.113-5.373a7 7 0 0 0-.445-.275l.21-.352q.183.111.452.287.27.176.51.428.234.246.398.562.164.31.164.692 0 .54-.216.873-.217.328-.721.328-.322 0-.504-.211a.7.7 0 0 1-.188-.463q0-.345.211-.521.205-.182.569-.182h.281a1.7 1.7 0 0 0-.123-.498 1.4 1.4 0 0 0-.252-.37 2 2 0 0 0-.346-.298m-2.168 0A7 7 0 0 0 10 6.352L10.21 6q.183.111.452.287.27.176.51.428.234.246.398.562.164.31.164.692 0 .54-.216.873-.217.328-.721.328-.322 0-.504-.211a.7.7 0 0 1-.188-.463q0-.345.211-.521.206-.182.569-.182h.281a1.8 1.8 0 0 0-.117-.492 1.4 1.4 0 0 0-.258-.375 2 2 0 0 0-.346-.3z" />
+                  </svg>
+                  <span>{project?.title}</span>
+                </p>
+                <p className="flex gap-2 items-center ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    fill="currentColor"
+                    className="bi bi-telephone-forward text-green-500"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zm10.762.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708" />
                   </svg>
                   <span>{project?.desription}</span>
                 </p>
@@ -131,64 +98,19 @@ const Work = ({ filteredData }) => {
                 <div className="flex gap-2">
                   <Image
                     alt="nextui logo"
-                    height={40}
+                    height={50}
                     radius="full"
                     src={project?.image}
                     width={40}
                   />
                   <div className="flex flex-col">
                     <p className="text-md">{project?.name}</p>
-                    <p className="text-sm text-default-500">{project?.email}</p>
+                    <p className="text-sm text-default-500">
+                      {project?.email1}
+                    </p>
                   </div>
                 </div>
-                <div className=" flex justify-end ">
-                  <AlertDialog>
-                    <AlertDialogTrigger asChild>
-                      <Button variant="outline">Taklif Yuborish</Button>
-                    </AlertDialogTrigger>
-                    <AlertDialogContent>
-                      <form
-                        onSubmit={handleSubmit((data) =>
-                          onSubmit(data, project)
-                        )}
-                      >
-                        <AlertDialogHeader>
-                          <AlertDialogTitle>
-                            {project?.name}
-                            <p className="text-red-500 text-sm font-medium">
-                              {" "}
-                              Iltimos taklif yuborsangiz telefon raqamingizni
-                              togri yuboring siz bilan boglanishadi
-                            </p>
-                          </AlertDialogTitle>
-                          <AlertDialogDescription className="flex flex-col gap-4">
-                            <div className="flex flex-col gap-2">
-                              <Label htmlFor="terms">Telefon</Label>
-                              <Input
-                                type="text"
-                                placeholder="+998"
-                                {...register("phone")}
-                              />
-                            </div>
-                            <div className="flex flex-col gap-2">
-                              <Label htmlFor="terms">
-                                Qoshimcha matn (shart emas)
-                              </Label>
-                              <Textarea
-                                placeholder="Qo'shimcha matn..."
-                                {...register("text")}
-                              />
-                            </div>
-                          </AlertDialogDescription>
-                        </AlertDialogHeader>
-                        <AlertDialogFooter className={"mt-3"}>
-                          <AlertDialogCancel>Bekor qilish</AlertDialogCancel>
-                          <Button>Yuborish</Button>
-                        </AlertDialogFooter>
-                      </form>
-                    </AlertDialogContent>
-                  </AlertDialog>
-                </div>
+                <div className=" flex justify-end "></div>
               </CardFooter>
             </Card>
           ))}
