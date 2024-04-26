@@ -95,8 +95,8 @@ export default function Navbar1() {
       <div className=" flex gap-16  items-center sm:w-[1200px] justify-center">
         <div className="sm:hidden">
           <NavbarContent justify="center">
-            <NavbarBrand>
-              <AcmeLogo />
+            <NavbarBrand className="flex gap-2 items-center">
+                      <img src="/logo.png" className="w-5 h-5 "/>
               <p className="font-bold text-inherit">Onlayn_ish.uz</p>
             </NavbarBrand>
           </NavbarContent>
