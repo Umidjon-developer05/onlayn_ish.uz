@@ -104,8 +104,8 @@ export default function Navbar1() {
 
         <div className="flex fixed container  sm:h-full justify-between items-center ">
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
-            <NavbarBrand>
-              <AcmeLogo />
+            <NavbarBrand className="flex gap-2 items-center">
+              <img src="/logo.png" className="w-5 h-5 "/>
               <Link href="/" className="font-bold text-inherit">
                 Onlayn_ish.uz
               </Link>
