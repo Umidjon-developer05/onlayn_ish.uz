@@ -12,7 +12,11 @@ function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
- 
+    <link
+        rel="icon"
+        href="/logo.png"
+        type="image/x-icon"
+      />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
