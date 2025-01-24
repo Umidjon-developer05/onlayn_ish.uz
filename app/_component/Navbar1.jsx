@@ -85,7 +85,7 @@ export default function Navbar1() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <div className="">
+      <div className="sm:hidden">
         <NavbarContent justify="start">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -103,7 +103,7 @@ export default function Navbar1() {
         </div>
 
         <div className="flex fixed container  sm:h-full justify-between items-center ">
-          <NavbarContent className="hidden sm:flex gap-4" justify="center">
+          <NavbarContent className=" sm:flex gap-4" justify="center">
             <NavbarBrand className="flex gap-2 items-center">
               <img src="/logo.png" className="w-5 h-5 "/>
               <Link href="/" className="font-bold text-inherit">
