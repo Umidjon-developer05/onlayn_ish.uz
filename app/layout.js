@@ -28,8 +28,9 @@ function RootLayout({ children }) {
               <Providers>
                 <div>
                   <Toaster position="top-center" />
+              <Navbar1 />
                   <GlobalState>
-                    <Navbar1 />
+                  
                     {children}
                   </GlobalState>
                   <Telegram />
