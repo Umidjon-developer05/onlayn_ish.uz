@@ -4,11 +4,11 @@ import { ThemeProvider } from "./components/ThemeContext";
 import { Providers } from "./providers";
 import Navbar1 from "./_component/Navbar1";
 import { Toaster } from "react-hot-toast";
+import Navbar1 from "./_component/Navbar1";
 import Telegram from "./_component/Telegram";
 import "./globals.css";
 import GlobalState from "./context/context";
 import "@uploadthing/react/styles.css";
-import Navbar1 from "./_component/Navbar1";
 function RootLayout({ children }) {
   return (
     <html lang="en">
