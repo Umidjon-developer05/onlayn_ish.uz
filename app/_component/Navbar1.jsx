@@ -1,5 +1,5 @@
-"use client";
-import { useState } from "react";
+"use client"
+import { useState } from "react"
 
 import {
   Navbar,
@@ -15,10 +15,10 @@ import {
   Link,
   DropdownItem,
   Avatar,
-} from "@nextui-org/react";
-import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import Settings from "../Settings/page";
+} from "@nextui-org/react"
+import { signOut, useSession } from "next-auth/react"
+import { useRouter } from "next/navigation"
+import Settings from "../Settings/page"
 export const AcmeLogo = () => (
   <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
     <path
@@ -28,18 +28,18 @@ export const AcmeLogo = () => (
       fillRule="evenodd"
     />
   </svg>
-);
+)
 
 export default function Navbar1() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const token = localStorage.getItem("token");
-  const router = useRouter();
-  const sesison = useSession();
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const token = localStorage.getItem("token")
+  const router = useRouter()
+  const sesison = useSession()
 
   function SingOut() {
-    signOut("/");
-    router.push("/");
-    localStorage.removeItem("token");
+    signOut("/")
+    router.push("/")
+    localStorage.removeItem("token")
   }
 
   const menuItems = [
@@ -77,26 +77,24 @@ export default function Navbar1() {
       name: "Logout",
       href: "/",
     },
-  ];
+  ]
 
   return (
     <Navbar
-      className="flex items-center h-[80px] border"
+      className="flex items-center h-[80px] border bg-black text-white dark"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
       <div className="sm:hidden">
         <NavbarContent justify="start">
-          <NavbarMenuToggle
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          />
+          <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
         </NavbarContent>
       </div>
       <div className=" flex gap-16  items-center sm:w-[1200px] justify-center">
         <div className="sm:hidden">
           <NavbarContent justify="center">
             <NavbarBrand className="flex gap-2 items-center">
-                      <img src="/logo.png" className="w-5 h-5 "/>
+              <img src="/logo.png" className="w-5 h-5 " />
               <p className="font-bold text-inherit">Onlayn_ish.uz</p>
             </NavbarBrand>
           </NavbarContent>
@@ -105,24 +103,24 @@ export default function Navbar1() {
         <div className="flex fixed container  sm:h-full justify-between items-center ">
           <NavbarContent className=" sm:flex gap-4" justify="center">
             <NavbarBrand className="flex gap-2 items-center">
-              <img src="/logo.png" className="w-5 h-5 "/>
+              <img src="/logo.png" className="w-5 h-5 " />
               <Link href="/" className="font-bold text-inherit">
                 Onlayn_ish.uz
               </Link>
             </NavbarBrand>
 
             <NavbarItem>
-              <Link color="foreground" href="/work">
+              <Link color="foreground" href="/work" className="text-white hover:text-gray-300">
                 ish
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link color="foreground" href="/Bozor">
+              <Link color="foreground" href="/Bozor" className="text-white hover:text-gray-300">
                 Bozor
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link color="foreground" href="/petition">
+              <Link color="foreground" href="/petition" className="text-white hover:text-gray-300">
                 Ishga Ariza
               </Link>
             </NavbarItem>
@@ -145,17 +143,11 @@ export default function Navbar1() {
                   </DropdownTrigger>
                   <DropdownMenu aria-label="Profile Actions" variant="flat">
                     <DropdownItem key="profile" className="h-14  gap-2">
-                      <p className="font-semibold">
-                        {sesison.data?.user?.name}
-                      </p>
-                      <p className="font-semibold">
-                        {sesison.data?.user?.email}
-                      </p>
+                      <p className="font-semibold">{sesison.data?.user?.name}</p>
+                      <p className="font-semibold">{sesison.data?.user?.email}</p>
                     </DropdownItem>
-                    {sesison.data?.user?.email ===
-                      process.env.NEXT_PUBLIC_EMAIL ||
-                    sesison.data?.user?.email ===
-                      process?.env.NEXT_PUBLIC_GITHUB ? (
+                    {sesison.data?.user?.email === process.env.NEXT_PUBLIC_EMAIL ||
+                    sesison.data?.user?.email === process?.env.NEXT_PUBLIC_GITHUB ? (
                       <DropdownItem key="Dashboard">
                         <Link href="/admin-dashboard">Admin</Link>
                       </DropdownItem>
@@ -170,9 +162,7 @@ export default function Navbar1() {
 
                     {token ? (
                       <DropdownItem key="system">
-                        <Link href={`${token ? "/InstructorAdmin" : "/"}`}>
-                          InstructorAdmin
-                        </Link>
+                        <Link href={`${token ? "/InstructorAdmin" : "/"}`}>InstructorAdmin</Link>
                       </DropdownItem>
                     ) : null}
                     {token ? null : (
@@ -183,11 +173,7 @@ export default function Navbar1() {
                       </DropdownItem>
                     )}
 
-                    <DropdownItem
-                      key="logout"
-                      color="danger"
-                      onClick={() => SingOut()}
-                    >
+                    <DropdownItem key="logout" color="danger" onClick={() => SingOut()}>
                       Log Out
                     </DropdownItem>
                   </DropdownMenu>
@@ -200,6 +186,7 @@ export default function Navbar1() {
                       color="warning"
                       href="/SingIn"
                       variant="flat"
+                      className="bg-warning text-white px-4 py-2 rounded-md hover:bg-warning-400"
                     >
                       Sign Up
                     </Link>
@@ -211,22 +198,13 @@ export default function Navbar1() {
         </div>
       </div>
 
-      
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index} className="pt-2">
             <Link
               className="w-full"
-              color={
-                index === 5
-                  ? "warning"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              onClick={() =>
-                index === menuItems.length - 1 ? SingOut() : null
-              }
+              color={index === 5 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"}
+              onClick={() => (index === menuItems.length - 1 ? SingOut() : null)}
               href={item?.href}
               size="lg"
             >
@@ -236,5 +214,6 @@ export default function Navbar1() {
         ))}
       </NavbarMenu>
     </Navbar>
-  );
+  )
 }
+
