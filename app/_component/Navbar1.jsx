@@ -211,6 +211,7 @@ export default function Navbar1() {
         </div>
       </div>
 
+      
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index} className="pt-2">
