@@ -2,7 +2,6 @@
 import AuthProvider from "./_component/AuthProvider/AuthProvider";
 import { ThemeProvider } from "./components/ThemeContext";
 import { Providers } from "./providers";
-import Navbar1 from "./_component/Navbar1";
 import { Toaster } from "react-hot-toast";
 import Navbar1 from "./_component/Navbar1";
 import Telegram from "./_component/Telegram";
@@ -29,7 +28,6 @@ function RootLayout({ children }) {
               <Providers>
                 <div>
                   <Toaster position="top-center" />
-              <Navbar1 />
                   <GlobalState>
                   <Navbar1/>
                     {children}
