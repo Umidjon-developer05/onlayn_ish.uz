@@ -13,6 +13,7 @@ function RootLayout({ children }) {
     <html lang="en">
       <body>
     <link
+  
         rel="icon"
         href="/logo.png"
         type="image/x-icon"
