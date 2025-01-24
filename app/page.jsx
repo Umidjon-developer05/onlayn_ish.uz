@@ -4,11 +4,12 @@ import React from "react";
 import { ImagesSlider } from "./components/ui/images-slider";
 import Blog from "./components/Blog/Blog";
 import Section from "./components/Section/Section";
-
+import Navbar1 from "./_component/Navbar1";
 export default function page() {
   const images = ["/work.avif", "/work1.avif", "/work2.jpg"];
   return (
     <>
+      <Navbar1/>
       <ImagesSlider className="h-[40rem]" images={images}>
         <motion.div
           initial={{
