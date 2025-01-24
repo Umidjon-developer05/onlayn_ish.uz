@@ -119,11 +119,7 @@ export default function Navbar1() {
                 Bozor
               </Link>
             </NavbarItem>
-            <NavbarItem>
-              <Link color="foreground" href="/petition" className="text-white hover:text-gray-300">
-                Ishga Ariza
-              </Link>
-            </NavbarItem>
+          
           </NavbarContent>
 
           <NavbarContent justify="center" className="hidden sm:flex">
@@ -197,7 +193,15 @@ export default function Navbar1() {
           </NavbarContent>
         </div>
       </div>
-
+<Link
+                      as={Link}
+                      color="warning"
+                      href="/SingIn"
+                      variant="flat"
+                      className="bg-warning text-white px-4 py-2 rounded-md hover:bg-warning-400"
+                    >
+                      Sign Up
+                    </Link>
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index} className="pt-2">
