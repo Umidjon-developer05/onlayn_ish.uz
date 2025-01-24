@@ -85,7 +85,7 @@ export default function Navbar1() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <div className="sm:hidden">
+      <div className="hidden">
         <NavbarContent justify="start">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
