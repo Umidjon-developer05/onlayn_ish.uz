@@ -8,6 +8,7 @@ import Telegram from "./_component/Telegram";
 import "./globals.css";
 import GlobalState from "./context/context";
 import "@uploadthing/react/styles.css";
+import Navbar1 from "./_component/Navbar1";
 function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -30,7 +31,7 @@ function RootLayout({ children }) {
                   <Toaster position="top-center" />
               <Navbar1 />
                   <GlobalState>
-                  
+                  <Navbar1/>
                     {children}
                   </GlobalState>
                   <Telegram />
