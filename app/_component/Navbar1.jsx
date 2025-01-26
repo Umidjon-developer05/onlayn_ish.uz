@@ -169,39 +169,19 @@ export default function Navbar1() {
                       </DropdownItem>
                     )}
 
-                    <DropdownItem key="logout" color="danger" onClick={() => SingOut()}>
-                      Log Out
-                    </DropdownItem>
+                  
                   </DropdownMenu>
                 </Dropdown>
               ) : (
                 <>
-                  <div className="flex gap-2 items-center">
-                    <Link
-                      as={Link}
-                      color="warning"
-                      href="/SingIn"
-                      variant="flat"
-                      className="bg-warning text-white px-4 py-2 rounded-md hover:bg-warning-400"
-                    >
-                      Sign Up
-                    </Link>
-                  </div>
+                
                 </>
               )}
             </NavbarItem>
           </NavbarContent>
         </div>
       </div>
-<Link
-                      as={Link}
-                      color="warning"
-                      href="/SingIn"
-                      variant="flat"
-                      className="bg-warning text-white px-4 py-2 rounded-md hover:bg-warning-400"
-                    >
-                      Sign Up
-                    </Link>
+
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index} className="pt-2">
